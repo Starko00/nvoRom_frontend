@@ -1,4 +1,17 @@
-.App {
+:root {
+  --main-color: #8685ef;
+  --2nd-color: #4f4dca;
+}
+
+* {
   margin: 0;
   padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body > * {
+  box-sizing: border-box;
 }
