@@ -1,10 +1,12 @@
-import Nav from "./components/NavComponent/Nav";
+import Hero from "./components/HeroComponent/Hero";
+import NavBar from "./components/NavigationBarComponent/NavigationBar";
 import "./style/App.scss";
 
 function App() {
   return (
     <div className="App">
-      <Nav />
+      <NavBar />
+      <Hero />
     </div>
   );
 }

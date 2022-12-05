@@ -1,20 +1,23 @@
-.nav {
+.navigationContainer {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 25px 0 45px;
+  padding-left: 45px;
   height: 72px;
   box-shadow: -1px 2px 10px -1px rgba(0, 0, 0, 0.1);
-  .nav_left {
+  &_logo {
+    width: 40px;
+    height: 43px;
+  }
+
+  &_primaryNavigation {
     display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-right: 25px;
 
-    .nav_list {
+    &_list {
       display: flex;
-
-      .nav_logo {
-        width: 40px;
-        height: 43px;
-      }
 
       li {
         margin: 20px;
@@ -27,22 +30,123 @@
         }
       }
     }
+    .primaryNavigation_btn {
+      background-color: var(--main-color);
+      border-radius: 18px;
+      width: 150px;
+      min-height: 36px;
+      overflow: hidden;
+      font-size: 16px;
+      font-weight: 500;
+      color: #ffffff;
+      border: none;
+      transition: 0.5s;
+      &:hover {
+        cursor: pointer;
+        background-color: var(--2nd-color);
+      }
+    }
   }
+  .mobile_menu {
+    &_open {
+      display: none;
+    }
+    &_close {
+      display: none;
+    }
+    &_line {
+      display: none;
+    }
+    &_p {
+      display: none;
+    }
+    &_text {
+      display: none;
+    }
+  }
+}
 
-  .nav_btn {
-    background-color: #8685ef;
-    border-radius: 18px;
-    width: 150px;
-    height: 36px;
-    overflow: hidden;
-    font-size: 16px;
-    font-weight: 500;
-    color: #ffffff;
-    border: none;
-    transition: 0.5s;
-    &:hover {
-      cursor: pointer;
-      background-color: #4f4dca;
+@media only screen and (max-width: 62em) {
+  .navigationContainer {
+    &_logo {
+      width: 60px;
+      height: 53px;
+    }
+    &_primaryNavigation {
+      display: none;
+    }
+    @keyframes menu_animation {
+      from {
+        transform: translateY(-100%);
+        overflow: hidden;
+      }
+      to {
+        height: 100vh;
+      }
+    }
+    .mobile_menu {
+      display: flex;
+      animation: menu_animation 0.7s ease-in;
+      color: var(--main-color);
+      position: fixed;
+      inset: 0 0 0 0;
+      background-color: hsl(0 0% 100% / 0.1);
+      backdrop-filter: blur(1rem);
+      height: 100vh;
+      width: unset;
+      margin: 0;
+      flex-direction: column;
+      justify-content: unset;
+      z-index: 10;
+      &_list {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin-top: 3.5rem;
+        a {
+          font-weight: 700;
+          font-size: 1.3rem;
+        }
+      }
+      &_line {
+        display: block;
+        width: 90%;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        border: 0.05rem solid var(--main-color);
+      }
+      &_p {
+        display: block;
+        color: black;
+      }
+      &_text {
+        font-family: "Covered By Your Grace", cursive;
+        font-size: 3rem;
+        display: block;
+        color: black;
+        span {
+          color: #9b0fab;
+        }
+      }
+      .mobile_menu_close {
+        display: block;
+        position: absolute;
+        width: 3rem;
+        height: 2.5rem;
+        aspect-ratio: 1;
+        top: 1rem;
+        right: 2rem;
+      }
+    }
+    .mobile_menu_open {
+      display: block;
+      position: absolute;
+      width: 3rem;
+      height: 2.5rem;
+      aspect-ratio: 1;
+      top: 1rem;
+      right: 2rem;
+      color: var(--main-color);
     }
   }
 }
