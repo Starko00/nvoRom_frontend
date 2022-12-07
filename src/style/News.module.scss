@@ -5,11 +5,13 @@
   flex-direction: column;
   align-items: flex-start;
   padding-left: 4.125rem;
+
   //------------------------grid styling kartica----------------------------------------------
   &_cards {
+    padding-right: 4.125rem;
     margin-top: 1.875rem;
     display: grid;
-    grid-template-columns: 0fr 0fr 0fr 0fr;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
     grid-template-rows: 1fr 1fr;
     gap: 40px 40px;
     grid-template-areas:
@@ -27,7 +29,8 @@
 //------------------------------------Big card style------------------------------------------------
 .card {
   color: #ffffff;
-  width: 923px;
+  max-width: 923px;
+  min-width: 723px;
   height: 902px;
   border-radius: 15px;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.74);
@@ -38,9 +41,14 @@
     margin: 20px;
     &_imageHolder {
       border-radius: 15px;
-      width: 881px;
+      max-width: 881px;
       height: 587px;
       overflow: hidden;
+      img {
+        object-fit: fill;
+        width: 100%;
+        height: 100%;
+      }
     }
     .text {
       text-align: left;
@@ -88,8 +96,9 @@
   background-color: #ffffff;
   border-radius: 30px;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.74);
-  width: 403px;
-  height: 436px;
+  max-width: 403px;
+  min-width: 342px;
+  min-height: 436px;
   overflow: hidden;
   background-color: white;
   position: relative;
@@ -97,10 +106,12 @@
   &_imageHolder {
     overflow: hidden;
     border-radius: 30px;
-    width: 403px;
+    max-width: 403px;
     height: 267px;
     img {
+      object-fit: fill;
       width: 100%;
+      height: 100%;
     }
   }
   .small_container {
@@ -154,12 +165,12 @@
   }
 }
 //---------------------------------------------------------------------------------------------------
-@media only screen and (max-width: 149em) {
+@media only screen and (max-width: 125em) {
   .container {
     &_cards {
       margin-top: 1.875rem;
       display: grid;
-      grid-template-columns: 0fr 0fr 0fr;
+      grid-template-columns: 2fr 2fr 2fr;
       grid-template-rows: 1fr 1fr;
       gap: 40px 40px;
       grid-template-areas:
@@ -177,14 +188,14 @@
 }
 //---------------------------------------------------------------------------------------------------
 
-@media only screen and (max-width: 120em) {
+@media only screen and (max-width: 100.9375em) {
   .container {
     &_cards {
       margin-top: 1.875rem;
       display: grid;
-      grid-template-columns: 0fr 0fr;
+      grid-template-columns: 5fr 2fr;
       grid-template-rows: 1fr 1fr;
-      gap: 40px 40px;
+      gap: 40px 30px;
       grid-template-areas:
         "card small-1 "
         "card small-2"
@@ -200,14 +211,14 @@
 }
 //---------------------------------------------------------------------------------------------------
 
-@media only screen and (max-width: 92em) {
+@media only screen and (max-width: 76.875em) {
   .container {
     &_cards {
       margin-top: 1.875rem;
       display: grid;
-      grid-template-columns: 0fr 0fr;
+      grid-template-columns: 2fr 2fr;
       grid-template-rows: 1fr 0fr 1fr;
-      gap: 40px 117px;
+      gap: 40px 60px;
       grid-template-areas:
         "card card "
         "small-1 small-2"
@@ -223,19 +234,22 @@
 }
 //---------------------------------------------------------------------------------------------------
 
-@media only screen and (max-width: 66em) {
+@media only screen and (max-width: 54.6875em) {
   .container {
     align-items: center;
     padding-left: 0;
+
     h1 {
       font-size: 70px;
     }
     &_cards {
+      padding-right: 1rem;
+      padding-left: 1rem;
       margin-top: 1.875rem;
       display: grid;
-      grid-template-columns: 0fr 1fr;
+      grid-template-columns: 2fr 2fr;
       grid-template-rows: 1fr 0fr;
-      gap: 60px 80px;
+      gap: 50px 35px;
       grid-template-areas:
         "small-1 small-2"
         "small-3 small-4";
@@ -247,14 +261,14 @@
 }
 //---------------------------------------------------------------------------------------------------
 
-@media only screen and (max-width: 62em) {
+@media only screen and (max-width: 46.875em) {
   .container {
     &_cards {
       margin-top: 1.875rem;
       display: grid;
-      grid-template-columns: 0fr;
+      grid-template-columns: 2fr;
       grid-template-rows: 1fr 0fr;
-      gap: 40px 117px;
+      gap: 40px 0px;
       grid-template-areas:
         "small-1"
         "small-2";
@@ -268,7 +282,7 @@
   }
 }
 //---------------------------------------------------------------------------------------------------
-@media only screen and (max-width: 28em) {
+@media only screen and (max-width: 23.4375em) {
   .container {
     h1 {
       font-size: 45px;
@@ -292,6 +306,7 @@
   }
   .small {
     width: 250px;
+    min-width: unset;
     height: 420px;
     .small_container {
       padding: 0.25rem;
