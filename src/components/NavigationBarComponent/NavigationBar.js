@@ -8,6 +8,7 @@ import NavigationButton from "./NavigationButton";
 const Nav = () => {
   const style = NavStyle;
   const [clicked, setClicked] = React.useState(false);
+  const funkcija = ()=>{console.log("Hero")}
   return (
     <div className={style.navigationContainer}>
       <img className={style.navigationContainer_logo} src={Logo} alt="Logo" />
@@ -38,7 +39,7 @@ const Nav = () => {
             <a href="#">Aktuelnosti</a>
           </li>
         </ul>
-        <NavigationButton />
+        <NavigationButton btnText={"Pridruži se"} funkcija={funkcija} />
         <hr className={style.mobile_menu_line} />
         <p className={style.mobile_menu_p}>Powered By</p>
         <h1 className={style.mobile_menu_text}>
