@@ -26,7 +26,7 @@
           text-decoration: none;
           font-size: 16px;
           font-weight: 500;
-          color: #252525;
+          color: white;
         }
       }
     }
@@ -90,7 +90,7 @@
       color: var(--main-color);
       position: fixed;
       inset: 0 0 0 0;
-      background-color: hsl(0 0% 100% / 0.1);
+      background-color: hsl(0deg 2% 11% / 59%);
       backdrop-filter: blur(1rem);
       height: 100vh;
       width: unset;
