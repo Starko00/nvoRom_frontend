@@ -15,3 +15,52 @@ body {
 body > * {
   box-sizing: border-box;
 }
+
+.swiper {
+  height: 510px;
+  width: 100%;
+  padding: 10px 0 0 0;
+}
+.swiper-slide-active {
+  width: 430px;
+  margin: 0;
+}
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  display: none;
+}
+.swiper-button-prev {
+  background-image: url("../components/images/prev.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  width: 70px;
+  height: 70px;
+  top: 220px;
+  left: -1px;
+}
+
+.swiper-button-prev::after {
+  display: none;
+}
+.swiper-button-next {
+  background-image: url("../components/images/next.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  width: 70px;
+  height: 70px;
+  top: 220px;
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+@media only screen and (max-width: 31.25em) {
+  .swiper-button-prev {
+    display: none;
+  }
+  .swiper-button-next {
+    display: none;
+  }
+}
