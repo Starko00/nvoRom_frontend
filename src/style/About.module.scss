@@ -1,0 +1,84 @@
+.container {
+  box-sizing: border-box;
+  min-height: 50vh;
+  display: flex;
+  padding-top: 113px;
+  justify-content: center;
+  &_img {
+    width: 800px;
+    height: 600px;
+    min-width: 500px;
+    min-height: 500px;
+  }
+  &_text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-width: 1090px;
+    margin-right: 10px;
+    &_header {
+      font-size: 64px;
+      font-weight: 600;
+      color: #252525;
+    }
+    &_paragraph {
+      font-size: 32px;
+      font-weight: 500;
+      color: rgba(37, 37, 37, 0.79);
+    }
+  }
+}
+//---------------------------------------------------------------------------------
+@media only screen and (max-width: 98.75em) {
+  .container {
+    &_text {
+      &_paragraph {
+        font-size: 28px;
+      }
+    }
+  }
+}
+//---------------------------------------------------------------------------------
+@media only screen and (max-width: 87.5em) {
+  .container {
+    &_img {
+      width: 400px;
+      height: 400px;
+      min-width: unset;
+      min-height: unset;
+    }
+    &_text {
+      &_paragraph {
+        font-size: 25px;
+      }
+    }
+  }
+}
+//---------------------------------------------------------------------------------
+@media only screen and (max-width: 62em) {
+  .container {
+    flex-direction: column-reverse;
+    align-items: center;
+    &_img {
+      width: 600px;
+      height: 500px;
+      min-width: 300px;
+      min-height: 300px;
+    }
+    &_text {
+      margin: 20px 10px;
+      text-align: center;
+      &_paragraph {
+        // font-size: 32px;
+      }
+    }
+  }
+}
+//---------------------------------------------------------------------------------
+@media only screen and (max-width: 37.5em) {
+  .container {
+    &_img {
+      display: none;
+    }
+  }
+}
