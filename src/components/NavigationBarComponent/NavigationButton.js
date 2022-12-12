@@ -1,8 +1,8 @@
 import React from "react";
-import NavStyle from "../../style/NavStyle.module.scss";
+import NavigationStyle from "../../style/Navigation.module.scss";
 
 const NavigationButton = ({ btnText, funkcija }) => {
-  const style = NavStyle;
+  const style = NavigationStyle;
   return (
     <button
       className={`${style.primaryNavigation_btn} ${style.mobile_menu_btn}`}

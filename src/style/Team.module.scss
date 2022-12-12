@@ -5,17 +5,15 @@
   padding: 113px 50px 20px 50px;
   justify-content: center;
   &_img {
-    width: 800px;
-    height: 600px;
+    max-width: 829px;
+    max-height: 622px;
     min-width: 500px;
     min-height: 500px;
+    margin-left: 60px;
   }
   &_text {
-    display: flex;
-    flex-direction: column;
+    max-width: 910px;
     text-align: left;
-    max-width: 1090px;
-    margin-right: 10px;
     &_header {
       font-size: 64px;
       font-weight: 600;
@@ -25,6 +23,17 @@
       font-size: 32px;
       font-weight: 500;
       color: rgba(37, 37, 37, 0.79);
+    }
+    &_holder {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 37px;
+      &_btn {
+        border-radius: 30px;
+        width: 236px;
+        height: 62px;
+        font-size: 33px;
+      }
     }
   }
 }
@@ -42,8 +51,8 @@
 @media only screen and (max-width: 87.5em) {
   .container {
     &_img {
-      width: 400px;
-      height: 400px;
+      max-width: 400px;
+      max-height: 400px;
       min-width: unset;
       min-height: unset;
     }
@@ -68,6 +77,9 @@
     &_text {
       margin: 20px 10px;
       text-align: center;
+      &_holder {
+        justify-content: center;
+      }
     }
   }
 }

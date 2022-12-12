@@ -1,14 +1,14 @@
 import React from "react";
-import AboutStyle from "../../style/About.module.scss";
-import mainImg from "../images/Image_4.png";
+import TeamStyle from "../../style/Team.module.scss";
+import btnstyle from "../../style/Button.module.scss";
+import mainImg from "../images/Image_6.png";
 
-const About = () => {
-  const style = AboutStyle;
+const Team = () => {
+  const style = TeamStyle;
   return (
     <div className={style.container}>
-      <img className={style.container_img} src={mainImg} alt="target_img" />
       <div className={style.container_text}>
-        <h1 className={style.container_text_header}>Vizija i misija</h1>
+        <h1 className={style.container_text_header}>Naš tim je naša snaga</h1>
         <p className={style.container_text_paragraph}>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.Lorem Ipsum is simply dummy text of the printing and
@@ -18,15 +18,17 @@ const About = () => {
           the printing and typesetting industry.Lorem Ipsum is simply dummy text
           of the printing and typesetting industry...….Lorem Ipsum is simply
           dummy text of the printing and typesetting industry.Lorem Ipsum is
-          simply dummy text of the printing and typesetting industry.Lorem Ipsum
-          is simply dummy text of the printing and typesetting
-          industry...….Lorem Ipsum is simply dummy text of the printing and
-          typesetting industry.Lorem Ipsum is simply dummy text of the printing
-          and
+          simply dummy text of
         </p>
+        <div className={style.container_text_holder}>
+          <button className={`${btnstyle} ${style.container_text_holder_btn}`}>
+            Read More
+          </button>
+        </div>
       </div>
+      <img className={style.container_img} src={mainImg} alt="team_img" />
     </div>
   );
 };
 
-export default About;
+export default Team;
