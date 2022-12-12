@@ -1,12 +1,12 @@
 import React from "react";
 import Logo from "../images/Logo.svg";
-import NavStyle from "../../style/NavStyle.module.scss";
+import NavigationStyle from "../../style/Navigation.module.scss";
 import { FaBars } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
 import NavigationButton from "./NavigationButton";
 
 const Nav = () => {
-  const style = NavStyle;
+  const style = NavigationStyle;
   const [clicked, setClicked] = React.useState(false);
   const funkcija = () => {
     console.log("Hero");
