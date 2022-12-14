@@ -24,7 +24,7 @@ const Project = () => {
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper Swiper1"
         breakpoints={{
           0: {
             slidesPerView: 1,

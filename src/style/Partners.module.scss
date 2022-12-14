@@ -1,0 +1,140 @@
+.container {
+  background-image: linear-gradient(179.89deg, #8685ef 0%, #434378 100%);
+  min-height: 330px;
+  padding: 25px 0 0 130px;
+  &_header {
+    font-size: 64px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  &_cards {
+    display: flex;
+    padding: 46px 0 0 120px;
+  }
+}
+
+.card {
+  display: flex;
+  &_img {
+    width: 107px;
+    height: 72px;
+  }
+  &_text {
+    display: flex;
+    flex-direction: column;
+    margin-right: 27px;
+    margin-left: 10px;
+    &_header {
+      font-size: 20px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+    &_info {
+      font-size: 15px;
+      font-weight: 500;
+      color: #ffffff;
+    }
+  }
+}
+//---------------------------------------------------------------------------------------------------
+@media only screen and (max-width: 116em) {
+  .card {
+    &_img {
+      width: 80px;
+      height: 50px;
+    }
+    &_text {
+      &_header {
+        font-size: 16px;
+      }
+      &_info {
+        font-size: 13px;
+      }
+    }
+  }
+}
+//---------------------------------------------------------------------------------------------------
+@media only screen and (max-width: 77.5em) {
+  .container {
+    padding-left: 100px;
+    &_cards {
+      padding-left: 0;
+    }
+  }
+}
+//---------------------------------------------------------------------------------------------------
+@media only screen and (max-width: 68.75em) {
+  .container {
+    &_header {
+      font-size: 55px;
+      font-weight: 500;
+      color: #ffffff;
+    }
+  }
+
+  .card {
+    &_img {
+      width: 60px;
+      height: 40px;
+    }
+    &_text {
+      &_header {
+        font-size: 13px;
+      }
+      &_info {
+        font-size: 10px;
+      }
+    }
+  }
+}
+//---------------------------------------------------------------------------------------------------
+@media only screen and (max-width: 44.6875em) {
+  .container {
+    padding-left: 10px;
+  }
+  .card {
+    &_img {
+      width: 50px;
+      height: 35px;
+    }
+    &_text {
+      &_header {
+        font-size: 11px;
+      }
+      &_info {
+        font-size: 8px;
+      }
+    }
+  }
+}
+//---------------------------------------------------------------------------------------------------
+@media only screen and (max-width: 34.625em) {
+  .container {
+    padding-left: 10px;
+  }
+  .card {
+    width: 151px;
+    &_img {
+      width: 40px;
+      height: 30px;
+    }
+    &_text {
+      &_header {
+        font-size: 10px;
+      }
+      &_info {
+        font-size: 7px;
+      }
+    }
+  }
+}
+//---------------------------------------------------------------------------------------------------
+@media only screen and (max-width: 17.5em) {
+  .container {
+    padding-left: 20px;
+  }
+  .card {
+    width: 151px;
+    padding-left: 40px;
+  }
+}
