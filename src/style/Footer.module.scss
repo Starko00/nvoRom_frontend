@@ -1,0 +1,15 @@
+.container {
+  background-color: #434378;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    span {
+      color: #9b0fab;
+    }
+  }
+}

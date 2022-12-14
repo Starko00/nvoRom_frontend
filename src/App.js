@@ -1,4 +1,5 @@
 import About from "./components/AboutComponent/About";
+import Footer from "./components/FooterComponent/Footer";
 import Hero from "./components/HeroComponent/Hero";
 import NavBar from "./components/NavigationBarComponent/NavigationBar";
 import News from "./components/NewsComponent/News";
@@ -17,6 +18,7 @@ function App() {
       <About />
       <Team />
       <Partners />
+      <Footer />
     </div>
   );
 }

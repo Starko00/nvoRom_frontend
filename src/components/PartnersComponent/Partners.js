@@ -7,7 +7,6 @@ import SwiperCore, { Autoplay } from "swiper";
 import "swiper/scss";
 import "swiper/scss/pagination";
 import "swiper/scss/navigation";
-import { Pagination, Navigation } from "swiper";
 SwiperCore.use([Autoplay]);
 
 const Partners = () => {
