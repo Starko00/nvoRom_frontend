@@ -7,7 +7,6 @@ import SwiperCore, { Autoplay } from "swiper";
 import "swiper/scss";
 import "swiper/scss/pagination";
 import "swiper/scss/navigation";
-import BreakPoints from "./BreakPoints";
 SwiperCore.use([Autoplay]);
 
 const Partners = () => {
