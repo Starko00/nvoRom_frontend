@@ -4,6 +4,7 @@ import NavigationStyle from "../../style/Navigation.module.scss";
 import { FaBars } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
 import NavigationButton from "./NavigationButton";
+import NavigationBarRoutes from "./NavigationBarRoutes";
 
 const Nav = () => {
   const style = NavigationStyle;
@@ -19,28 +20,7 @@ const Nav = () => {
           clicked && style.mobile_menu
         }`}
       >
-        <ul
-          className={`${style.navigationContainer_primaryNavigation_list} ${style.mobile_menu_list}`}
-        >
-          <li>
-            <a href="#">Početna</a>
-          </li>
-          <li>
-            <a href="#">O Nama</a>
-          </li>
-          <li>
-            <a href="#">Projekti</a>
-          </li>
-          <li>
-            <a href="#">Kontakt</a>
-          </li>
-          <li>
-            <a href="#">Tim</a>
-          </li>
-          <li>
-            <a href="#">Aktuelnosti</a>
-          </li>
-        </ul>
+        <NavigationBarRoutes />
         <NavigationButton btnText={"Pridruži se"} funkcija={funkcija} />
         <hr className={style.mobile_menu_line} />
         <p className={style.mobile_menu_p}>Powered By</p>

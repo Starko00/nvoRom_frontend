@@ -34,10 +34,10 @@ body > * {
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
-  width: 70px;
-  height: 70px;
-  top: 220px;
-  left: -1px;
+  width: 70px !important;
+  height: 70px !important;
+  top: 220px !important;
+  left: -1px !important;
 }
 
 .swiper-button-prev::after {
@@ -48,9 +48,9 @@ body > * {
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
-  width: 70px;
-  height: 70px;
-  top: 220px;
+  width: 70px !important;
+  height: 70px !important;
+  top: 220px !important;
 }
 
 .swiper-button-next::after {
@@ -62,5 +62,17 @@ body > * {
   }
   .swiper-button-next {
     display: none;
+  }
+}
+
+.image {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 500px;
+    height: 500px;
   }
 }

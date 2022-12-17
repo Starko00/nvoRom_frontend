@@ -1,23 +1,20 @@
-import About from "./components/AboutComponent/About";
 import Footer from "./components/FooterComponent/Footer";
-import Hero from "./components/HeroComponent/Hero";
 import NavBar from "./components/NavigationBarComponent/NavigationBar";
-import News from "./components/NewsComponent/News";
-import Partners from "./components/PartnersComponent/Partners";
-import Project from "./components/ProjectComponent/Project";
-import Team from "./components/TeamComponent/Team";
 import "./style/App.scss";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AboutUs from "./pages/AboutUsComponent/AboutUsPage";
+import HomePage from "./pages/HomePageComponent/HomePage";
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <Hero />
-      <News />
-      <Project />
-      <About />
-      <Team />
-      <Partners />
+      <Router>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="about" element={<AboutUs />} />
+        </Routes>
+      </Router>
       <Footer />
     </div>
   );
