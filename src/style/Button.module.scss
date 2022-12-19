@@ -11,6 +11,6 @@ button {
   transition: 0.5s;
   &:hover {
     cursor: pointer;
-    background-color: var(--2nd-color);
+    background-color: var(--hover-color);
   }
 }

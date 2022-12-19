@@ -1,8 +1,16 @@
 :root {
   --main-color: #8685ef;
-  --2nd-color: #4f4dca;
+  --2nd-color: #434378;
+  --hover-color: #4f4dca;
 }
-
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #a9a8ee;
+  border-radius: 15px;
+}
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +23,6 @@ body {
 body > * {
   box-sizing: border-box;
 }
-
 .Swiper1 {
   height: 510px;
   width: 100%;
@@ -62,17 +69,5 @@ body > * {
   }
   .swiper-button-next {
     display: none;
-  }
-}
-
-.image {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  img {
-    width: 500px;
-    height: 500px;
   }
 }
