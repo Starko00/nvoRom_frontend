@@ -25,7 +25,7 @@ const Partners = () => {
             pauseOnMouseEnter: true,
           }}
           loopFillGroupWithBlank={true}
-          className="mySwiper Swiper2"
+          className="Swiper2"
           breakpoints={{
             0: {
               slidesPerView: 1,
