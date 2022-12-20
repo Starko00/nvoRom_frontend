@@ -1,0 +1,116 @@
+.container {
+  padding: 62px;
+  display: flex;
+  justify-content: center;
+  &_leftSide {
+    max-width: 710px;
+    min-width: 500px;
+    &_img {
+      border-radius: 30px;
+      max-width: 100%;
+      height: 468px;
+    }
+    &_header {
+      font-size: 28px;
+      font-weight: 600;
+      color: #252525;
+      margin-bottom: 23px;
+    }
+    &_card {
+      display: flex;
+      flex-direction: column;
+      gap: 17px;
+    }
+  }
+
+  &_rightSide {
+    margin-left: 30px;
+    text-align: left;
+    max-width: 1000px;
+    &_header {
+      font-size: 55px;
+      font-weight: 600;
+      color: #252525;
+    }
+    &_paragraph {
+      font-size: 24px;
+      color: #252525;
+      text-align: left;
+      max-height: 600px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      line-height: 35px;
+    }
+    &_btncontainer {
+      display: flex;
+      justify-content: flex-end;
+      &_button {
+        background-color: #ffcc67;
+        border-radius: 18px;
+        width: 169px;
+        height: 36px;
+        min-height: unset;
+        overflow: hidden;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+//------------------------------------------------------------------------------------------------------------------
+
+.card {
+  background-color: var(--2nd-color);
+  border-radius: 14.5px;
+  border: 1px solid #707070;
+  max-width: 697px;
+  height: 45px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 37px 0 19px;
+  &_left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    &_img {
+      color: #ffffff;
+      width: 18px;
+      height: 20px;
+    }
+    &_header {
+      font-size: 18px;
+      color: #ffffff;
+    }
+    &_paragraph {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.57);
+    }
+  }
+
+  &_right {
+    &_button {
+      width: 97px;
+      height: 23px;
+      min-height: unset;
+      font-size: 16px;
+      font-weight: 500;
+      color: #ffffff;
+    }
+  }
+}
+//------------------------------------------------------------------------------------------------------------------
+
+@media only screen and (max-width: 71.6875em) {
+  .container {
+    &_rightSide {
+      &_header {
+        line-height: 62px;
+      }
+      &_paragraph {
+        max-height: 560px;
+      }
+    }
+  }
+}

@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className={style.container}>
       <h1>
-        Powerd by With<span>Us</span>
+        Powered by With<span>Us</span>
       </h1>
     </footer>
   );
