@@ -6,7 +6,7 @@
     font-size: 4rem;
     font-weight: 600;
     color: #ffffff;
-    margin-bottom: 5.813rem;
+    margin-bottom: 3.813rem;
   }
 }
 .card {
@@ -68,12 +68,13 @@
     }
   }
 }
-
+//------------------------------------------------------------------------------------------------------
 @media only screen and (max-width: 970px) {
   .container {
     padding-left: 1rem;
   }
 }
+//------------------------------------------------------------------------------------------------------
 @media only screen and (max-width: 31.25em) {
   .container {
     padding-left: 0;

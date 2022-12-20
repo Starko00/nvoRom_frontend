@@ -2,8 +2,9 @@ import Footer from "./components/FooterComponent/Footer";
 import NavBar from "./components/NavigationBarComponent/NavigationBar";
 import "./style/App.scss";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import AboutUs from "./pages/AboutUsComponent/AboutUsPage";
 import HomePage from "./pages/HomePageComponent/HomePage";
+import AboutUsPage from "./pages/AboutUsPageComponent/AboutUsPage";
+import ProjectsPage from "./pages/ProjectsPageComponent/ProjectsPage";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="about" element={<AboutUs />} />
+          <Route path="about" element={<AboutUsPage />} />
+          <Route path="projects" element={<ProjectsPage />} />
         </Routes>
       </Router>
       <Footer />

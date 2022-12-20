@@ -16,7 +16,7 @@ const NavigationBarRoutes = () => {
           <Link to="/about">O nama</Link>
         </li>
         <li>
-          <a href="#">Projekti</a>
+          <a href="/projects">Projekti</a>
         </li>
         <li>
           <a href="#">Kontakt</a>

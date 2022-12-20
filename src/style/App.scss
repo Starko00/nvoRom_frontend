@@ -23,6 +23,7 @@ body {
 body > * {
   box-sizing: border-box;
 }
+
 .Swiper1 {
   height: 510px;
   width: 100%;
@@ -31,6 +32,9 @@ body > * {
 .swiper-slide-active {
   width: 430px;
   margin: 0;
+}
+.swiper-wrapper {
+  top: 15px;
 }
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
@@ -65,9 +69,14 @@ body > * {
 }
 @media only screen and (max-width: 37.5em) {
   .swiper-button-prev {
-    display: none;
+    display: none !important;
   }
   .swiper-button-next {
-    display: none;
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .swiper-wrapper {
+    top: unset;
   }
 }

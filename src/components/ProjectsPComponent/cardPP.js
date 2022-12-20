@@ -1,9 +1,9 @@
 import React from "react";
-import AUPStyle from "../../style/AboutPage.module.scss";
+import PPStyle from "../../style/ProjectsPage.module.scss";
 import btnStyle from "../../style/Button.module.scss";
 
 const cardAUP = (props) => {
-  const style = AUPStyle;
+  const style = PPStyle;
   return (
     <div className={style.card}>
       <div className={style.card_left}>
