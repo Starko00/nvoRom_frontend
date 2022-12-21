@@ -11,7 +11,6 @@ const ProjectPage = () => {
   const cardElements = cardData.map((card) => {
     return <Card card={card} key={card.id} />;
   });
-
   return (
     <div className={style.container}>
       <div className={style.container_leftSide}>
