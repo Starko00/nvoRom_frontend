@@ -1,11 +1,12 @@
 import React from "react";
-import ProjectStyle from "./Project.module.scss";
 import btnStyle from "../../style/Button.module.scss";
+import MainStyle from "./ProjectsMainPage.module.scss";
 import { Link } from "react-router-dom";
-const ProjectCard = (props) => {
-  const style = ProjectStyle;
+
+const cardMainBig = (props) => {
+  const style = MainStyle;
   return (
-    <div className={`${style.card}`}>
+    <div className={style.card}>
       <div className={style.card_imageHolder}>
         <img src={props.card.img} alt="slika" />
       </div>
@@ -15,8 +16,9 @@ const ProjectCard = (props) => {
           <p className={style.text_paragraph}>{props.card.text}</p>
         </div>
         <div className={style.card_container_button}>
-          <Link to="project">
+          <Link to="/project">
             <button
+              type="buttons"
               className={`${btnStyle} ${style.card_container_button_btn}`}
             >
               Read More
@@ -28,4 +30,4 @@ const ProjectCard = (props) => {
   );
 };
 
-export default ProjectCard;
+export default cardMainBig;
