@@ -1,5 +1,5 @@
 import React from "react";
-import HeroStyle from "../../style/Hero.module.scss";
+import HeroStyle from "./Hero.module.scss";
 import ButtonStyle from "../../style/Button.module.scss";
 import landing from "../images/hero.png";
 

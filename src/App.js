@@ -4,7 +4,7 @@ import "./style/App.scss";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePageComponent/HomePage";
 import AboutUsPage from "./pages/AboutUsPageComponent/AboutUsPage";
-import ProjectsPage from "./pages/ProjectsPageComponent/ProjectsPage";
+import ProjectsPage from "./pages/ProjectsPageComponent/ProjectsMainPage";
 
 function App() {
   return (

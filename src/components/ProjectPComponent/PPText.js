@@ -1,5 +1,5 @@
 import React from "react";
-import PPStyle from "../../style/ProjectsPage.module.scss";
+import PPStyle from "./ProjectPage.module.scss";
 
 const PPText = () => {
   const style = PPStyle;

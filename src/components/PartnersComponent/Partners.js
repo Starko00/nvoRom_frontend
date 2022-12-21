@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./Card";
 import { cardData } from "../../hooks/PartnersHook/cardsData";
-import PartnersStyle from "../../style/Partners.module.scss";
+import PartnersStyle from "./Partners.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay } from "swiper";
 import "swiper/scss";

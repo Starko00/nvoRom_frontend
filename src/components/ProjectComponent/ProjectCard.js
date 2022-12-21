@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectStyle from "../../style/Project.module.scss";
+import ProjectStyle from "./Project.module.scss";
 import btn from "../../style/Button.module.scss";
 
 const ProjectCard = (props) => {

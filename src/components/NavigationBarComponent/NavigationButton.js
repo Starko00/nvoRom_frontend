@@ -1,5 +1,5 @@
 import React from "react";
-import NavigationStyle from "../../style/Navigation.module.scss";
+import NavigationStyle from "./Navigation.module.scss";
 
 const NavigationButton = ({ btnText, funkcija }) => {
   const style = NavigationStyle;

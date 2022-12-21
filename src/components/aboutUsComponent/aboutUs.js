@@ -1,5 +1,5 @@
 import React from "react";
-import aboutUsStyle from "../../style/aboutUs.module.scss";
+import aboutUsStyle from "./aboutUs.module.scss";
 import Text from "./aboutUsText";
 import img from "../images/Logo_2.png";
 

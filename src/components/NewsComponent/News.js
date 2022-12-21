@@ -1,5 +1,5 @@
 import React from "react";
-import NewsStyle from "../../style/News.module.scss";
+import NewsStyle from "./News.module.scss";
 import Card from "./Card";
 import SmallCard from "./SmallCard";
 import { cardData } from "../../hooks/NewsHook/cardsData";

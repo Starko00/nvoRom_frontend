@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectStyle from "../../style/Project.module.scss";
+import ProjectStyle from "../ProjectComponent/Project.module.scss";
 import ProjectCard from "./ProjectCard";
 import { cardData } from "../../hooks/ProjectHook/ProjectCardsData";
 import { Swiper, SwiperSlide } from "swiper/react";

@@ -1,5 +1,5 @@
 import React from "react";
-import Main from "../../components/ProjectsPComponent/PP";
+import Main from "../../components/ProjectPComponent/PP";
 
 const Projects = () => {
   return (

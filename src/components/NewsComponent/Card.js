@@ -1,5 +1,5 @@
 import React from "react";
-import NewsStyle from "../../style/News.module.scss";
+import NewsStyle from "./News.module.scss";
 import btn from "../../style/Button.module.scss";
 
 const Card = (props) => {

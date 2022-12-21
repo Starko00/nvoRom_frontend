@@ -1,5 +1,5 @@
 import React from "react";
-import PartnersStyle from "../../style/Partners.module.scss";
+import PartnersStyle from "./Partners.module.scss";
 
 const Card = (props) => {
   const style = PartnersStyle;

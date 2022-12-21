@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../images/Logo.svg";
-import NavigationStyle from "../../style/Navigation.module.scss";
+import NavigationStyle from "./Navigation.module.scss";
 import { FaBars } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
 import NavigationButton from "./NavigationButton";

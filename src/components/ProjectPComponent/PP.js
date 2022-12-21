@@ -1,12 +1,12 @@
 import React from "react";
-import PPStyle from "../../style/ProjectsPage.module.scss";
+import PPStyle from "./ProjectPage.module.scss";
 import img from "../images/Image_6.png";
 import btnStyle from "../../style/Button.module.scss";
 import Card from "./cardPP";
-import { cardData } from "../../hooks/ProjectsPageHook/cardsData";
+import { cardData } from "../../hooks/ProjectPageHook/cardsData";
 import Text from "./PPText";
 
-const AboutUsPage = () => {
+const ProjectPage = () => {
   const style = PPStyle;
   const cardElements = cardData.map((card) => {
     return <Card card={card} key={card.id} />;
@@ -41,4 +41,4 @@ const AboutUsPage = () => {
   );
 };
 
-export default AboutUsPage;
+export default ProjectPage;

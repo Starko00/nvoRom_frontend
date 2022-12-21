@@ -1,5 +1,5 @@
 import React from "react";
-import TeamStyle from "../../style/Team.module.scss";
+import TeamStyle from "./Team.module.scss";
 import btnstyle from "../../style/Button.module.scss";
 import mainImg from "../images/Image_6.png";
 
