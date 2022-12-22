@@ -5,6 +5,7 @@
   align-items: center;
   overflow: scroll;
   &_leftSide {
+    margin-left: 40px;
     &_header {
       font-size: 55px;
       font-weight: 600;
@@ -19,7 +20,9 @@
   }
   &_rightSide {
     display: flex;
-    height: 350px;
+    height: 600px;
+    margin-left: 20px;
+    min-width: 500px;
     .card {
       background-color: #ffffff;
       border-radius: 30px;
@@ -106,7 +109,6 @@
 @media only screen and (max-width: 125em) {
   .container {
     &_rightSide {
-      height: 300px;
       .card {
         margin-right: 40px;
         width: 300px;
@@ -151,5 +153,28 @@
   }
   .smallCard {
     width: 220px;
+  }
+}
+//---------------------------------------------------------------------------------
+
+@media only screen and (max-width: 68.75em) {
+  .container {
+    flex-direction: column;
+    align-items: unset;
+    &_leftSide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0;
+    }
+  }
+}
+//---------------------------------------------------------------------------------
+
+@media only screen and (max-width: 23.125em) {
+  .container {
+    &_rightSide {
+      margin-left: 0;
+    }
   }
 }
