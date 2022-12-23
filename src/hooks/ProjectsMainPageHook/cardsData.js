@@ -1,4 +1,5 @@
 import icon from "../../components/images/ic.svg";
+
 export const cardData = [
   {
     id: 1,

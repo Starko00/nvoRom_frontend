@@ -1,10 +1,12 @@
-import React from "react";
+
 import btnStyle from "../../style/Button.module.scss";
 import MainStyle from "./ProjectsMainPage.module.scss";
 import { Link } from "react-router-dom";
-
-const cardMainBig = (props) => {
+import { useNavigate } from "react-router-dom";
+export const CardMainBig = (props) => {
+  const navigate = useNavigate()
   const style = MainStyle;
+  console.log(props)
   return (
     <div className={style.card}>
       <div className={style.card_imageHolder}>
@@ -12,22 +14,26 @@ const cardMainBig = (props) => {
       </div>
       <div className={style.card_container}>
         <div className={style.text}>
-          <h1 className={style.text_header}>{props.card.name}</h1>
-          <p className={style.text_paragraph}>{props.card.text}</p>
+          <h1 className={style.text_header}>{props.card.projectName}</h1>
+          <p className={style.text_paragraph}>{props.card.secodnaryText}</p>
         </div>
         <div className={style.card_container_button}>
-          <Link to="/project">
+          
             <button
               type="buttons"
+              onClick={()=>{
+                
+                navigate('/project',{state:{projectId: props.card._id}})
+              }}
               className={`${btnStyle} ${style.card_container_button_btn}`}
             >
               Read More
             </button>
-          </Link>
+          
         </div>
       </div>
     </div>
   );
 };
 
-export default cardMainBig;
+

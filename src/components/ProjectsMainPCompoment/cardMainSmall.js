@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import btnStyle from "../../style/Button.module.scss";
 import cardStyle from "../../style/projectsCardSmall.module.scss";
 import MainStyle from "./ProjectsMainPage.module.scss";
@@ -18,7 +18,13 @@ const cardMainSmall = (props) => {
         </p>
       </div>
       <div className={cardStyle.card_right}>
-        <button className={`${btnStyle} ${style.smallCard_button}`}>
+        <button
+          className={`${btnStyle} ${style.smallCard_button}`}
+          onClick={() => {
+            console.log(props.card.date);
+            props.projectYear(props.card.date)
+          }}
+        >
           Read More
         </button>
       </div>

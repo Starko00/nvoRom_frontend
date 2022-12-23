@@ -2,27 +2,15 @@ import React from "react";
 import AboutStyle from "./About.module.scss";
 import mainImg from "../images/Image_4.png";
 
-const About = () => {
+const About = ({aboutTittle = "",aboutText = ""}) => {
   const style = AboutStyle;
   return (
     <div className={style.container}>
       <img className={style.container_img} src={mainImg} alt="target_img" />
       <div className={style.container_text}>
-        <h1 className={style.container_text_header}>Vizija i misija</h1>
+        <h1 className={style.container_text_header}>{aboutTittle}</h1>
         <p className={style.container_text_paragraph}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.Lorem Ipsum is simply dummy text of the printing and
-          typesetting industry.Lorem Ipsum is simply dummy text of the printing
-          and typesetting industry...….Lorem Ipsum is simply dummy text of the
-          printing and typesetting industry.Lorem Ipsum is simply dummy text of
-          the printing and typesetting industry.Lorem Ipsum is simply dummy text
-          of the printing and typesetting industry...….Lorem Ipsum is simply
-          dummy text of the printing and typesetting industry.Lorem Ipsum is
-          simply dummy text of the printing and typesetting industry.Lorem Ipsum
-          is simply dummy text of the printing and typesetting
-          industry...….Lorem Ipsum is simply dummy text of the printing and
-          typesetting industry.Lorem Ipsum is simply dummy text of the printing
-          and
+         {aboutText}
         </p>
       </div>
     </div>
