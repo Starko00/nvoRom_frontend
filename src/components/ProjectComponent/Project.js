@@ -54,7 +54,7 @@ const Project = () => {
       >
         {cardData?.map((card) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={card.id}>
               <ProjectCard card={card} key={card.id} />
             </SwiperSlide>
           );

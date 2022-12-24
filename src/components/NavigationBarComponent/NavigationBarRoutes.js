@@ -22,7 +22,7 @@ const NavigationBarRoutes = () => {
           <a href="#">Kontakt</a>
         </li>
         <li>
-          <a href="#">Tim</a>
+          <Link to="/team">Tim</Link>
         </li>
         <li>
           <Link to="#">Aktuelnosti</Link>
