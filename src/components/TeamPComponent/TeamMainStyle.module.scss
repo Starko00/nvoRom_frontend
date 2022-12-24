@@ -316,7 +316,7 @@
   }
 }
 //----------------------------------------------------------------------------
-@media only screen and (max-width: 26.25em) {
+@media only screen and (max-width: 28.4375em) {
   .container {
     flex-wrap: unset;
     flex-direction: column;
@@ -340,6 +340,7 @@
             font-size: 10px;
             text-align: center;
             width: 60px;
+            word-break: break-word;
           }
         }
       }
