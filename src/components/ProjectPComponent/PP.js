@@ -18,7 +18,6 @@ const ProjectPage = () => {
       .then((res) => {
         setProject(res.data.project);
         console.log(res.data.project.documentation.length);
-        
       });
   }, []);
 
@@ -34,7 +33,12 @@ const ProjectPage = () => {
           alt="About_img"
         />
         <h1 className={style.container_leftSide_header}>Dokumentacija:</h1>
-        <div className={style.container_leftSide_card}> { project?.documentation && project.documentation?.length != 0 ? cardElements : "No Documentation aveable"  }</div>
+        <div className={style.container_leftSide_card}>
+          {" "}
+          {project?.documentation && project.documentation?.length !== 0
+            ? cardElements
+            : "No documentation available"}
+        </div>
       </div>
 
       <div className={style.container_rightSide}>
