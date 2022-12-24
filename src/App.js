@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePageComponent/HomePage";
 import AboutUsPage from "./pages/AboutUsPageComponent/AboutUsPage";
 import ProjectsPage from "./pages/ProjectsPageComponent/ProjectsMainPage";
 import Project from "./components/ProjectPComponent/PP";
+import TeamMainPage from "./components/TeamPComponent/TeamMainPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route exact path="/about" element={<AboutUsPage />} />
           <Route exact path="/projects" element={<ProjectsPage />} />
           <Route exact path="/project" element={<Project />} />
+          <Route exact path="/team" element={<TeamMainPage />} />
         </Routes>
       </Router>
       <Footer />

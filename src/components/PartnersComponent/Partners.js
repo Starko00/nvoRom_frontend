@@ -67,7 +67,7 @@ const Partners = () => {
         >
           {cardData?.map((card) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={card.id}>
                 <Card card={card} key={card.id} />
               </SwiperSlide>
             );
