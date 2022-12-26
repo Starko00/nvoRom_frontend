@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import MainStyle from "./ProjectsMainPage.module.scss";
 import SmallCard from "./cardMainSmall";
-import{CardMainBig} from './CardMainBig'
+import { CardMainBig } from "./CardMainBig";
 import { cardData } from "../../hooks/ProjectsMainPageHook/cardsData";
 import { bigCardData } from "../../hooks/ProjectsMainPageHook/bigCardsData";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,17 +14,25 @@ import axios from "axios";
 const PMainPage = () => {
   const style = MainStyle;
   //----------------------------------------------------------------------------------
-  const [projectInYear,setProjectInYear] = useState()
+  const [projectInYear, setProjectInYear] = useState();
   const smallCardElements = cardData.map((card) => {
-    return <SmallCard card={card} key={card.id} projectYear = {setProjectInYear}/>;
+    return (
+      <SmallCard card={card} key={card.id} projectYear={setProjectInYear} />
+    );
   });
 
-  const [bigProjectData, setBigProjectData] = useState([])
+  const [bigProjectData, setBigProjectData] = useState([]);
 
-  useEffect(()=>{
-    
-    axios.post("http://20.229.216.236/phiramenca/api/v1/projects",{"yearFilter":projectInYear}).then(res=>{setBigProjectData(res.data.data)}).catch(err=>console.log(err))
-  },[projectInYear])
+  useEffect(() => {
+    axios
+      .post("http://20.229.216.236/phiramenca/api/v1/projects", {
+        yearFilter: projectInYear,
+      })
+      .then((res) => {
+        setBigProjectData(res.data.data);
+      })
+      .catch((err) => console.log(err));
+  }, [projectInYear]);
   //----------------------------------------------------------------------------------
 
   return (
@@ -85,13 +93,9 @@ const PMainPage = () => {
           }}
         >
           {bigProjectData?.map((card) => {
-            
             return (
-
               <SwiperSlide key={card._id}>
-               
                 <CardMainBig card={card} />
-               
               </SwiperSlide>
             );
           })}

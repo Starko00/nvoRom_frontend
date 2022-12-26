@@ -9,7 +9,7 @@ export const cardData = [
   {
     id: 2,
     img: `${icon}`,
-    title: "Izvršni direktor",
+    title: "Zamjenik Direktora",
   },
   {
     id: 3,

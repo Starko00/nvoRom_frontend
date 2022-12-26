@@ -2,6 +2,7 @@ import PPStyle from "./ProjectPage.module.scss";
 import img from "../images/Image_6.png";
 import btnStyle from "../../style/Button.module.scss";
 import { CardPP } from "./CardPP";
+import { useNavigate } from "react-router-dom";
 
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -24,6 +25,7 @@ const ProjectPage = () => {
   const cardElements = project?.documentation?.map((documentation) => {
     return <CardPP card={documentation} key={documentation} />;
   });
+  const navigate = useNavigate();
   return (
     <div className={style.container}>
       <div className={style.container_leftSide}>
@@ -50,6 +52,10 @@ const ProjectPage = () => {
         </p>
         <div className={style.container_rightSide_btncontainer}>
           <button
+            type="buttons"
+            onClick={() => {
+              navigate("/projects");
+            }}
             className={`${btnStyle} ${style.container_rightSide_btncontainer_button}`}
           >
             Ostali Projekti

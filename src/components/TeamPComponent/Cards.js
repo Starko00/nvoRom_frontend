@@ -14,7 +14,7 @@ const Cards = (props) => {
           alt="Logo"
         />
         <p
-          className={`${cardStyle.card_left_paragraph} ${style.card_leftSide_title}`}
+          className={`${cardStyle.card_left_paragraph} ${style.card_leftSide_title} `}
         >
           {props.card.title}
         </p>
