@@ -6,7 +6,7 @@ import icon from "../../components/images/ic.svg";
 
 export const CardPP = (props) => {
   const navigate = useNavigate()
-  console.log(props)
+
   const style = cardStyle;
   return (
     <div className={style.card}>

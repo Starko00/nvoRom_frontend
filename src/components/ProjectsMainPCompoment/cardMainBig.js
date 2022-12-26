@@ -10,7 +10,11 @@ export const CardMainBig = (props) => {
   return (
     <div className={style.card}>
       <div className={style.card_imageHolder}>
-        <img src={props.card.img} alt="slika" />
+      {props.card.projectImg? <img
+          className={style.container_leftSide_img}
+          src={`http://20.229.216.236/uploads/projects/${props.card?.projectImg}`}
+          alt="About_img"
+        /> : "No project img"} 
       </div>
       <div className={style.card_container}>
         <div className={style.text}>

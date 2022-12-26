@@ -18,7 +18,7 @@ const ProjectPage = () => {
       })
       .then((res) => {
         setProject(res.data.project);
-        console.log(res.data.project.documentation.length);
+      
       });
   }, []);
 
@@ -29,11 +29,11 @@ const ProjectPage = () => {
   return (
     <div className={style.container}>
       <div className={style.container_leftSide}>
-        <img
+       {project.projectImg? <img
           className={style.container_leftSide_img}
-          src={img}
+          src={`http://20.229.216.236/uploads/projects/${project?.projectImg}`}
           alt="About_img"
-        />
+        /> : "No project img"} 
         <h1 className={style.container_leftSide_header}>Dokumentacija:</h1>
         <div className={style.container_leftSide_card}>
           {" "}

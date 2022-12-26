@@ -1,54 +1,59 @@
+import img from "../../components/images/elvis.jpg";
+import fb from "../../components/images/facebook.svg";
+import insta from "../../components/images/instagram.svg";
+import ln from "../../components/images/linkedin.svg";
 import React from "react";
 import MainStyle from "./TeamMainStyle.module.scss";
 
 const TeamMemberCard = (props) => {
+  console.log(props.card?.memeber)
   const style = MainStyle;
   return (
     <div className={style.container_center}>
       <div className={style.container_center_imageHolder}>
         <img
           className={style.container_center_imageHolder_img}
-          src={props.card.img}
+          src={`http://20.229.216.236/uploads/teamMembers/${props.card?.memeber?.teamMemberPhoto}`}
           alt="Direktor"
         />
       </div>
       <div className={style.container_center_social}>
+
         <div className={style.container_center_social_holder}>
           <img
             className={style.container_center_social_holder_icon}
-            src={props.card.social_1}
+            src={fb}
             alt="social"
+            onClick={()=>{
+              window.location = props.card?.memeber.socialMediaFacebook
+            }}
           />
-          <a href="#" className={style.container_center_social_holder_text}>
-            {props.card.social_link_1}
-          </a>
+         
         </div>
         <div className={style.container_center_social_holder}>
           <img
             className={style.container_center_social_holder_icon}
-            src={props.card.social_2}
+            src={insta}
             alt="social"
+            onClick={()=>{
+              window.location = props.card?.memeber.socialMediaInstagram
+            }}
           />
-          <a
-            href="https://www.instagram.com/mr._elvis_berisa/"
-            className={style.container_center_social_holder_text}
-          >
-            {props.card.social_link_2}
-          </a>
+          <p>Instagram</p>
+         
         </div>
         <div className={style.container_center_social_holder}>
           <img
             className={style.container_center_social_holder_icon}
-            src={props.card.social_3}
+            src={ln}
             alt="social"
+            onClick={()=>{
+              window.location = props.card?.memeber.socialMediaLinkedIn
+            }}
           />
-          <a
-            href="https://www.linkedin.com/in/elvis-berisa-43268a51/"
-            className={style.container_center_social_holder_text}
-          >
-            {props.card.social_link_3}
-          </a>
+         
         </div>
+        
       </div>
     </div>
   );
