@@ -6,7 +6,7 @@ import React from "react";
 import MainStyle from "./TeamMainStyle.module.scss";
 
 const TeamMemberCard = (props) => {
-  console.log(props.card?.memeber)
+  console.log(props.card?.memeber);
   const style = MainStyle;
   return (
     <div className={style.container_center}>
@@ -18,42 +18,37 @@ const TeamMemberCard = (props) => {
         />
       </div>
       <div className={style.container_center_social}>
-
         <div className={style.container_center_social_holder}>
           <img
             className={style.container_center_social_holder_icon}
             src={fb}
             alt="social"
-            onClick={()=>{
-              window.location = props.card?.memeber.socialMediaFacebook
+            onClick={() => {
+              window.location = props.card?.memeber.socialMediaFacebook;
             }}
           />
-         
         </div>
         <div className={style.container_center_social_holder}>
           <img
             className={style.container_center_social_holder_icon}
             src={insta}
             alt="social"
-            onClick={()=>{
-              window.location = props.card?.memeber.socialMediaInstagram
+            onClick={() => {
+              window.location = props.card?.memeber.socialMediaInstagram;
             }}
           />
           <p>Instagram</p>
-         
         </div>
         <div className={style.container_center_social_holder}>
           <img
             className={style.container_center_social_holder_icon}
             src={ln}
             alt="social"
-            onClick={()=>{
-              window.location = props.card?.memeber.socialMediaLinkedIn
+            onClick={() => {
+              window.location = props.card?.memeber.socialMediaLinkedIn;
             }}
           />
-         
         </div>
-        
       </div>
     </div>
   );

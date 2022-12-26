@@ -264,6 +264,10 @@
 
 @media only screen and (max-width: 46.875em) {
   .container {
+    padding-top: 2.625rem;
+    h1 {
+      font-size: 2.25rem;
+    }
     &_cards {
       margin-top: 1.875rem;
       display: grid;
@@ -279,6 +283,38 @@
     }
     :nth-child(5) {
       display: none;
+    }
+  }
+  .small {
+    max-width: 345px;
+    .small_container {
+      top: 220px;
+      .text {
+        &_header {
+          font-size: 1.35rem;
+          text-align: center;
+        }
+        &_paragraph {
+          font-size: 0.825rem;
+          text-align: left;
+        }
+      }
+
+      &_author {
+        &_left {
+          img {
+            width: 1.55rem;
+            height: 1.55rem;
+          }
+          p {
+            font-size: 0.8rem;
+          }
+        }
+        &_btn {
+          width: 109px;
+          height: 34px;
+        }
+      }
     }
   }
 }
@@ -310,6 +346,7 @@
     min-width: unset;
     height: 420px;
     .small_container {
+      top: 200px;
       padding: 0.25rem;
       .text {
         &_header {
@@ -322,9 +359,15 @@
       }
       &_author {
         margin-top: 1.5rem;
+        &_left {
+          p {
+            font-size: 0.6rem;
+          }
+        }
         &_btn {
           width: 90px;
           height: 36px;
+          font-size: 14px;
         }
       }
     }

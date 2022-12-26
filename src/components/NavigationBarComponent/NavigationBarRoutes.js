@@ -2,7 +2,7 @@ import React from "react";
 import NavigationStyle from "./Navigation.module.scss";
 import { Link } from "react-router-dom";
 
-const NavigationBarRoutes = () => {
+const NavigationBarRoutes = (props) => {
   const style = NavigationStyle;
   return (
     <div>
@@ -10,22 +10,34 @@ const NavigationBarRoutes = () => {
         className={`${style.navigationContainer_primaryNavigation_list} ${style.mobile_menu_list}`}
       >
         <li>
-          <Link to="/">Početna</Link>
+          <Link to="/" onClick={() => props.setClicked(!props.clicked)}>
+            Početna
+          </Link>
         </li>
         <li>
-          <Link to="/about">O nama</Link>
+          <Link to="/about" onClick={() => props.setClicked(!props.clicked)}>
+            O nama
+          </Link>
         </li>
         <li>
-          <Link to="/projects">Projekti</Link>
+          <Link to="/projects" onClick={() => props.setClicked(!props.clicked)}>
+            Projekti
+          </Link>
         </li>
         <li>
-          <a href="#">Kontakt</a>
+          <Link to="#" onClick={() => props.setClicked(!props.clicked)}>
+            Kontakt
+          </Link>
         </li>
         <li>
-          <Link to="/team">Tim</Link>
+          <Link to="/team" onClick={() => props.setClicked(!props.clicked)}>
+            Tim
+          </Link>
         </li>
         <li>
-          <Link to="#">Aktuelnosti</Link>
+          <Link to="#" onClick={() => props.setClicked(!props.clicked)}>
+            Aktuelnosti
+          </Link>
         </li>
       </ul>
     </div>

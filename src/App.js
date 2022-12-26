@@ -11,17 +11,19 @@ import TeamMainPage from "./components/TeamPComponent/TeamMainPage";
 function App() {
   return (
     <div className="App">
-      <Router>
-        <NavBar />
-        <Routes>
-          <Route exact path="/" element={<HomePage />} />
-          <Route exact path="/about" element={<AboutUsPage />} />
-          <Route exact path="/projects" element={<ProjectsPage />} />
-          <Route exact path="/project" element={<Project />} />
-          <Route exact path="/team" element={<TeamMainPage />} />
-        </Routes>
-      </Router>
-      <Footer />
+      <div className="app_container">
+        <Router>
+          <NavBar />
+          <Routes>
+            <Route exact path="/" element={<HomePage />} />
+            <Route exact path="/about" element={<AboutUsPage />} />
+            <Route exact path="/projects" element={<ProjectsPage />} />
+            <Route exact path="/project" element={<Project />} />
+            <Route exact path="/team" element={<TeamMainPage />} />
+          </Routes>
+        </Router>
+        <Footer />
+      </div>
     </div>
   );
 }

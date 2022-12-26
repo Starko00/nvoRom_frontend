@@ -23,9 +23,8 @@ const Nav = () => {
         <NavigationBarRoutes />
         <NavigationButton btnText={"Pridruži se"} funkcija={funkcija} />
         <hr className={style.mobile_menu_line} />
-        <p className={style.mobile_menu_p}>Powered By</p>
         <h1 className={style.mobile_menu_text}>
-          With<span>Us</span>
+          Powered by With<span>Us</span>
         </h1>
         <FaTimes
           className={style.mobile_menu_close}

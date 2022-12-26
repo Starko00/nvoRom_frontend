@@ -27,6 +27,10 @@ body > * {
   box-sizing: border-box;
 }
 //----------------------------------------------------------------------------
+.app_container {
+  height: 100vh;
+}
+//----------------------------------------------------------------------------
 .Swiper1 {
   height: 510px;
   width: 100%;
@@ -114,6 +118,17 @@ body > * {
   }
 }
 //----------------------------------------------------------------------------
+@media only screen and (max-width: 37.5em) {
+  .Swiper1 {
+    .swiper-button-prev {
+      display: none;
+    }
+    .swiper-button-next {
+      display: none;
+    }
+  }
+}
+//----------------------------------------------------------------------------
 @media only screen and (max-width: 35.1875em) {
   .Swiper3 {
     padding-left: 40px !important;
@@ -126,26 +141,17 @@ body > * {
   }
 }
 //----------------------------------------------------------------------------
+@media only screen and (max-width: 31.25em) {
+  .Swiper1 {
+    .swiper-wrapper {
+      top: unset;
+    }
+  }
+}
+//----------------------------------------------------------------------------
 @media only screen and (max-width: 28.125em) {
   .Swiper3 {
     padding-left: 20px !important;
-  }
-}
-//----------------------------------------------------------------------------
-@media only screen and (max-width: 37.5em) {
-  .Swiper1 {
-    .swiper-button-prev {
-      display: none;
-    }
-    .swiper-button-next {
-      display: none;
-    }
-  }
-}
-//----------------------------------------------------------------------------
-@media only screen and (max-width: 31.25em) {
-  .swiper-wrapper {
-    top: unset;
   }
 }
 //----------------------------------------------------------------------------

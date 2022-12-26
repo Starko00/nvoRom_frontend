@@ -86,8 +86,28 @@
 //---------------------------------------------------------------------------------
 @media only screen and (max-width: 37.5em) {
   .container {
+    padding: 10px 15px 20px 15px;
     &_img {
       display: none;
+    }
+    &_text {
+      font-size: 2.25rem;
+      &_header {
+        font-size: 2.25rem;
+        margin-bottom: 0.5rem;
+      }
+      &_paragraph {
+        font-size: 1rem;
+        text-align: left;
+      }
+      &_holder {
+        margin-top: 15px;
+        &_btn {
+          width: 125px;
+          height: 36px;
+          font-size: 1rem;
+        }
+      }
     }
   }
 }

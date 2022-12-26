@@ -2,18 +2,24 @@ import React from "react";
 import TeamStyle from "./Team.module.scss";
 import btnstyle from "../../style/Button.module.scss";
 import mainImg from "../images/Image_6.png";
+import { useNavigate } from "react-router-dom";
 
-const Team = ({teamText=""}) => {
+const Team = ({ teamText = "" }) => {
+  const navigate = useNavigate();
   const style = TeamStyle;
   return (
     <div className={style.container}>
       <div className={style.container_text}>
         <h1 className={style.container_text_header}>Naš tim je naša snaga</h1>
-        <p className={style.container_text_paragraph}>
-         {teamText}
-        </p>
+        <p className={style.container_text_paragraph}>{teamText}</p>
         <div className={style.container_text_holder}>
-          <button className={`${btnstyle} ${style.container_text_holder_btn}`}>
+          <button
+            type="buttons"
+            onClick={() => {
+              navigate("/team");
+            }}
+            className={`${btnstyle} ${style.container_text_holder_btn}`}
+          >
             Read More
           </button>
         </div>
