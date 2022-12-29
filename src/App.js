@@ -8,6 +8,7 @@ import ProjectsPage from "./pages/ProjectsPageComponent/ProjectsMainPage";
 import Project from "./components/ProjectPComponent/PP";
 import TeamMainPage from "./components/TeamPComponent/TeamMainPage";
 import NewsPage from "./pages/NewsPageComponent/NewsPage";
+import { ContactPage } from "./pages/ContactPage/ContactPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route exact path="/project" element={<Project />} />
             <Route exact path="/team" element={<TeamMainPage />} />
             <Route exact path="/news" element={<NewsPage />} />
+            <Route exact path="/contact" element={<ContactPage/>}/>
           </Routes>
         </Router>
         <Footer />

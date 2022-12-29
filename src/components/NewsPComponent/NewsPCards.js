@@ -4,7 +4,7 @@ import NewsPStyle from "./NewsP.module.scss";
 import { cardData } from "../../hooks/NewsHook/cardsData";
 import { smallCardsData } from "../../hooks/NewsHook/smallCardsData";
 import SmallPCard from "./SmallPCard";
-
+// Featured set
 const NewsP = () => {
   const style = NewsPStyle;
   const cardElements = cardData.map((card) => {

@@ -5,6 +5,7 @@ import MainStyle from "./ProjectsMainPage.module.scss";
 
 const cardMainSmall = (props) => {
   const style = MainStyle;
+  
   return (
     <div className={`${cardStyle.card} ${style.smallCard}`}>
       <div className={cardStyle.card_left}>
