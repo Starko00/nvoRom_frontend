@@ -1,9 +1,7 @@
 import PPStyle from "./ProjectPage.module.scss";
-import img from "../images/Image_6.png";
 import btnStyle from "../../style/Button.module.scss";
 import { CardPP } from "./CardPP";
 import { useNavigate } from "react-router-dom";
-
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -18,7 +16,6 @@ const ProjectPage = () => {
       })
       .then((res) => {
         setProject(res.data.project);
-      
       });
   }, []);
 
@@ -29,11 +26,15 @@ const ProjectPage = () => {
   return (
     <div className={style.container}>
       <div className={style.container_leftSide}>
-       {project.projectImg? <img
-          className={style.container_leftSide_img}
-          src={`http://20.229.216.236/uploads/projects/${project?.projectImg}`}
-          alt="About_img"
-        /> : "No project img"} 
+        {project.projectImg ? (
+          <img
+            className={style.container_leftSide_img}
+            src={`http://20.229.216.236/uploads/projects/${project?.projectImg}`}
+            alt="About_img"
+          />
+        ) : (
+          "No project img"
+        )}
         <h1 className={style.container_leftSide_header}>Dokumentacija:</h1>
         <div className={style.container_leftSide_card}>
           {" "}
