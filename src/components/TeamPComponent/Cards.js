@@ -4,10 +4,9 @@ import cardStyle from "../../style/projectsCardSmall.module.scss";
 import MainStyle from "./TeamMainStyle.module.scss";
 import icon from "../../components/images/ic_account.svg";
 const Cards = (props) => {
-  const style = MainStyle; 
-  
+  const style = MainStyle;
+
   return (
-   
     <div className={`${cardStyle.card}  ${style.card}`}>
       <div className={`${cardStyle.card_left} ${style.card_leftSide}`}>
         <img
@@ -25,7 +24,7 @@ const Cards = (props) => {
         <button
           className={`${btnStyle} ${style.card_button}`}
           onClick={() => {
-            props.infoToDisplay(`${props.card._id}`)
+            props.infoToDisplay(`${props.card._id}`);
           }}
         >
           Read More
