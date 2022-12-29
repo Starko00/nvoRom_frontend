@@ -17,7 +17,6 @@ const NavigationBarRoutes = (props) => {
         <li>
           <Link to="/about" onClick={() => props.setClicked(!props.clicked)}>
             O nama
-          
           </Link>
         </li>
         <li>
@@ -36,7 +35,7 @@ const NavigationBarRoutes = (props) => {
           </Link>
         </li>
         <li>
-          <Link to="#" onClick={() => props.setClicked(!props.clicked)}>
+          <Link to="/news" onClick={() => props.setClicked(!props.clicked)}>
             Aktuelnosti
           </Link>
         </li>

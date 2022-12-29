@@ -1,0 +1,137 @@
+.newscard_container {
+  display: flex;
+  color: #ffffff;
+  height: auto;
+  width: 90%;
+  margin-bottom: 70px;
+  padding: 38px 70px 34px 14px;
+  border-radius: 15px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.74);
+  &_left {
+    &_imageHolder {
+      border-radius: 15px;
+      width: 629px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    &_author {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+      justify-content: space-between;
+      &_img {
+        width: 48px;
+        height: 52px;
+        border-radius: 50%;
+      }
+      p {
+        font-size: 18px;
+        font-weight: 600;
+        color: rgba(37, 37, 37, 0.43);
+        margin-left: 0.625rem;
+      }
+    }
+  }
+  &_right {
+    margin-left: 30px;
+    &_text {
+      text-align: left;
+      //   line-height: 40px;
+      &_header {
+        font-size: 44px;
+        font-weight: 600;
+        color: #252525;
+      }
+      &_paragraph {
+        font-size: 25px;
+        font-weight: 600;
+        color: rgba(37, 37, 37, 0.79);
+      }
+    }
+    &_button {
+      margin-right: 2rem;
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+//---------------------------------------------------------------------------
+@media only screen and (max-width: 100em) {
+  .newscard_container {
+    &_right {
+      &_text {
+        --max-lines: 20;
+        --line-height: 1.4;
+        max-height: calc(var(--max-lines) * 1em * var(--line-height));
+        line-height: var(--line-height);
+        overflow: hidden;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          height: calc(1em * var(--line-height));
+          width: 100%;
+          bottom: 0;
+          pointer-events: none;
+          background: linear-gradient(to bottom, transparent, white);
+        }
+      }
+    }
+  }
+}
+//---------------------------------------------------------------------------
+@media only screen and (max-width: 62em) {
+  .newscard_container {
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    padding-right: 14px;
+    &_left {
+      &_imageHolder {
+        width: unset;
+        max-width: 629px;
+        min-width: 200px;
+        height: 100%;
+      }
+    }
+    &_right {
+      &_text {
+        --max-lines: 10;
+      }
+    }
+  }
+}
+//---------------------------------------------------------------------------
+@media only screen and (max-width: 43.75em) {
+  .newscard_container {
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    padding-right: 14px;
+    &_left {
+      &_author {
+        &_img {
+          width: 40px;
+          height: 40px;
+        }
+        p {
+          font-size: 0.8rem;
+        }
+      }
+    }
+    &_right {
+      &_text {
+        &_header {
+          font-size: 2.25rem;
+        }
+        &_paragraph {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

@@ -7,6 +7,7 @@ export const cardData = [
     name: "Heading 1",
     text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     authorImg: `${img}`,
+    authorName: "Elvis Berishaj",
     date: "1.1.2022.",
   },
 ];

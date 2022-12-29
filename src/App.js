@@ -7,12 +7,12 @@ import AboutUsPage from "./pages/AboutUsPageComponent/AboutUsPage";
 import ProjectsPage from "./pages/ProjectsPageComponent/ProjectsMainPage";
 import Project from "./components/ProjectPComponent/PP";
 import TeamMainPage from "./components/TeamPComponent/TeamMainPage";
-import { ContactPage } from "./pages/ContactPage/ContactPage";
+import NewsPage from "./pages/NewsPageComponent/NewsPage";
 
 function App() {
   return (
     <div className="App">
-      <div className="app_container" style={{"height":"100%"}}>
+      <div className="app_container">
         <Router>
           <NavBar />
           <Routes>
@@ -21,7 +21,7 @@ function App() {
             <Route exact path="/projects" element={<ProjectsPage />} />
             <Route exact path="/project" element={<Project />} />
             <Route exact path="/team" element={<TeamMainPage />} />
-            <Route exact path="/contact" element={<ContactPage/>}/>
+            <Route exact path="/news" element={<NewsPage />} />
           </Routes>
         </Router>
         <Footer />
