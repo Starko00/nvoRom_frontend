@@ -1,20 +1,29 @@
-import emailjs from "@emailjs/browser"
-import ContactPageStyle from "./ContactPageStyle.module.css"
+import emailjs from "@emailjs/browser";
+import ContactPageStyle from "./ContactPageStyle.module.scss";
 import { useRef } from "react";
 export const ContactPage = () => {
-    const style = ContactPageStyle
-    const form = useRef()
-    const sendMessage = (e)=>{
-        e.preventDefault()
-        emailjs.sendForm('service_tjre33d','template_4k9ax0s',form.current,'bKcZzz_g5kNe5nk_a').then((res)=>{
-            console.log(res)
-          })
-    }
+  const style = ContactPageStyle;
+  const form = useRef();
+  const sendMessage = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_tjre33d",
+        "template_4k9ax0s",
+        form.current,
+        "bKcZzz_g5kNe5nk_a"
+      )
+      .then((res) => {
+        console.log(res);
+      });
+  };
   return (
     <div>
       <div className={style.container} id="contact">
         <h1>Kontakt</h1>
-        <p>Budite slobodni da pitate, predložite ili uputite bilo šta.</p>
+        <p className={style.paragraph}>
+          Budite slobodni da pitate, predložite ili uputite bilo šta.
+        </p>
         <form
           ref={form}
           className={style.ContactForm}
@@ -52,9 +61,7 @@ export const ContactPage = () => {
               ></textarea>
             </label>
           </div>
-          <label className={style.containerInputLabel}>
-            
-          </label>
+          <label className={style.containerInputLabel}></label>
           <button className="getStarted-btn" type="submit" value="Send">
             Send
           </button>
