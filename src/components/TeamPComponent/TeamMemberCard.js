@@ -37,7 +37,6 @@ const TeamMemberCard = (props) => {
               window.location = props.card?.memeber.socialMediaInstagram;
             }}
           />
-          <p>Instagram</p>
         </div>
         <div className={style.container_center_social_holder}>
           <img

@@ -17,7 +17,10 @@ const Cards = (props) => {
         <p
           className={`${cardStyle.card_left_paragraph} ${style.card_leftSide_title} `}
         >
-          {props.card.name}, <span>{props.card.position}</span>
+          {props.card.name},{" "}
+          <span className={style.card_leftSide_title_span}>
+            {props.card.position}
+          </span>
         </p>
       </div>
       <div className={cardStyle.card_right}>

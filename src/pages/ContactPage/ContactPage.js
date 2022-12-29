@@ -18,7 +18,7 @@ export const ContactPage = () => {
       });
   };
   return (
-    <div>
+    <div className={style.main}>
       <div className={style.container} id="contact">
         <h1>Kontakt</h1>
         <p className={style.paragraph}>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import MainStyle from "./TeamMainStyle.module.scss";
-import { cardData } from "../../hooks/TeamPageHook/cardsData";
+import pointyL from "../images/pointLeft.svg";
+import pointyU from "../images/pointUp.svg";
 import Cards from "./Cards";
 import TeamMemberInfo from "./TeamMemberInfo";
 import TeamMemberCard from "./TeamMemberCard";
@@ -50,8 +51,24 @@ const TeamMainPage = () => {
         <p className={style.container_leftSide_paragraph}>20 godina iskustva</p>
         {cardElements}
       </div>
-      { displayMemberId ? centerCard:"" }
-      {displayMemberId ? rightCard:<span>Hey our team is amazing read more about them</span>}
+      {displayMemberId ? centerCard : ""}
+      {displayMemberId ? (
+        rightCard
+      ) : (
+        <span className={style.container_extra}>
+          <img
+            className={style.container_extra_imgL}
+            src={pointyL}
+            alt="hand"
+          />
+          <img
+            className={style.container_extra_imgU}
+            src={pointyU}
+            alt="hand"
+          />
+          Hey our team is amazing read more about them
+        </span>
+      )}
     </div>
   );
 };
