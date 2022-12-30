@@ -112,8 +112,8 @@
   background-color: #ffffff;
   border-radius: 30px;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.74);
-  max-width: 403px;
-  min-width: 342px;
+  max-width: 400px;
+  min-width: 280px;
   min-height: 436px;
   overflow: hidden;
   background-color: white;
@@ -122,7 +122,7 @@
   &_imageHolder {
     overflow: hidden;
     border-radius: 30px;
-    max-width: 403px;
+    width: 100%;
     height: 267px;
     img {
       object-fit: fill;
@@ -149,7 +149,7 @@
         font-size: 1rem;
         font-weight: 500;
         color: rgba(37, 37, 37, 0.79);
-        --max-lines: 25;
+        --max-lines: 5;
         --line-height: 1.4;
         max-height: calc(var(--max-lines) * 1em * var(--line-height));
         line-height: var(--line-height);
@@ -176,15 +176,15 @@
         display: flex;
         align-items: center;
         img {
-          width: 1.25rem;
-          height: 1.25rem;
+          width: 2.25rem;
+          height: 2.25rem;
           border-radius: 50%;
         }
         p {
           font-size: 0.625rem;
           font-weight: 600;
           color: rgba(37, 37, 37, 0.43);
-          margin-left: 0.625rem;
+          margin-left: 0.25rem;
         }
       }
       &_btn {
@@ -317,6 +317,7 @@
   }
   .small {
     max-width: 345px;
+    min-width: 280px;
     .small_container {
       top: 220px;
       .text {
@@ -372,11 +373,8 @@
     }
   }
   .small {
-    width: 250px;
-    min-width: unset;
-    height: 420px;
     .small_container {
-      top: 200px;
+      top: 230px;
       padding: 0.25rem;
       .text {
         &_header {
@@ -390,8 +388,12 @@
       &_author {
         margin-top: 1.5rem;
         &_left {
+          &_img {
+            width: 2rem;
+            height: 2rem;
+          }
           p {
-            font-size: 0.6rem;
+            font-size: 0.8rem;
           }
         }
         &_btn {
