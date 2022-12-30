@@ -21,7 +21,11 @@ const Nav = () => {
         }`}
       >
         <NavigationBarRoutes />
-        <NavigationButton btnText={"Pridruži se"} funkcija={funkcija} />
+        <NavigationButton
+          btnText={"Pridruži se"}
+          funkcija={setClicked}
+          clicked={clicked}
+        />
         <hr className={style.mobile_menu_line} />
         <h1 className={style.mobile_menu_text}>
           Powered by With<span>Us</span>
