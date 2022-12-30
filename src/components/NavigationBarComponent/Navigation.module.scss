@@ -86,7 +86,7 @@
     }
     .mobile_menu {
       display: flex;
-      animation: menu_animation 0.7s ease-in;
+      animation: menu_animation 0.2s ease-in-out;
       color: var(--main-color);
       position: fixed;
       inset: 0 0 0 0;
