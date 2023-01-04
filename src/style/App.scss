@@ -3,6 +3,7 @@
   --2nd-color: #434378;
   --hover-color: #4f4dca;
 }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 //----------------------------------------------------------------------------
 ::-webkit-scrollbar {
   width: 10px;
@@ -25,6 +26,7 @@ body {
 //----------------------------------------------------------------------------
 body > * {
   box-sizing: border-box;
+  font-family: 'Rubik' !important;
 }
 //----------------------------------------------------------------------------
 .app_container {

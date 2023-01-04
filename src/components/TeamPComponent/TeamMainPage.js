@@ -56,16 +56,6 @@ const TeamMainPage = () => {
         rightCard
       ) : (
         <span className={style.container_extra}>
-          <img
-            className={style.container_extra_imgL}
-            src={pointyL}
-            alt="hand"
-          />
-          <img
-            className={style.container_extra_imgU}
-            src={pointyU}
-            alt="hand"
-          />
           Hey our team is amazing read more about them
         </span>
       )}

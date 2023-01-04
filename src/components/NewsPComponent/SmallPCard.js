@@ -1,9 +1,11 @@
 import React from "react";
 import NewsPStyle from "./NewsP.module.scss";
 import btn from "../../style/Button.module.scss";
+import { useNavigate } from "react-router-dom";
 
 const SmallPCard = (props) => {
   const style = NewsPStyle;
+  const navigate = useNavigate()
   const btnstyle = btn;
   return (
     <div className={style.small}>
@@ -21,7 +23,9 @@ const SmallPCard = (props) => {
             <p>{props.card.authorName} |</p>
             <p>{props.card.date}</p>
           </div>
-          <button className={`${btnstyle} ${style.small_container_author_btn}`}>
+          <button className={`${btnstyle} ${style.small_container_author_btn}`} onClick = {()=>{
+            navigate("/article",{state:props.card})
+          }}>
             Read More
           </button>
         </div>

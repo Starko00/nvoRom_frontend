@@ -11,8 +11,8 @@
     margin-left: 20px;
     position: relative;
     top: 80px;
-    font-size: 2rem;
-    animation: slide 4s ease-in-out 0s infinite normal both;
+    font-size: 1rem;
+    animation: slide 15s ease-in-out 1s infinite normal both;
     &_imgU {
       display: none;
     }
@@ -212,7 +212,7 @@
     }
   }
   .card {
-    width: 290px;
+    width: 309px;
   }
 }
 //----------------------------------------------------------------------------
@@ -370,18 +370,18 @@
   }
 
   .card {
-    padding-left: 10px;
+   
     margin-bottom: 5px;
-    width: 160px;
-    height: 30px;
+    padding: 0.5rem;
+    width: 309px;
+   
     &_leftSide {
       gap: 8px;
       &_img {
-        width: 10px;
-        height: 10px;
+       display: none;
       }
       &_title {
-        font-size: 10px;
+        font-size: 1rem;
       }
     }
     &_button {
@@ -395,6 +395,7 @@
 @media only screen and (max-width: 28.4375em) {
   .container {
     flex-wrap: unset;
+    
     flex-direction: column;
     &_leftSide {
       margin-left: 0;
@@ -420,10 +421,11 @@
     }
     &_rightSide {
       margin: 20px 0 50px 0;
+      padding: 0.5rem;
       text-align: center;
       min-width: unset;
       &_text {
-        width: 180px;
+        
         max-height: unset;
         overflow: unset;
       }

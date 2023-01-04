@@ -2,12 +2,13 @@ import React from "react";
 import NewsPStyle from "./NCNP.module.scss";
 import btn from "../../style/Button.module.scss";
 import img from "../images/elvis.jpg";
+import { useNavigate } from "react-router-dom";
 
 const CardP = (props) => {
   const style = NewsPStyle;
   const btnstyle = btn;
   const date = props.card.date;
-
+  const navigate = useNavigate()
   return (
     <div className={style.newscard_container}>
       <div className={style.newscard_container_left}>
@@ -48,6 +49,9 @@ const CardP = (props) => {
         <div className={style.newscard_container_right_button}>
           <button
             className={`${btnstyle} ${style.newscard_container_right_button_btn}`}
+            onClick ={()=>{
+              navigate('/article',{state:props.card})
+            }}
           >
             Read More
           </button>

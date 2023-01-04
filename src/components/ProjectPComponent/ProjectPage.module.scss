@@ -175,6 +175,7 @@
 @media only screen and (max-width: 37.5em) {
   .container {
     height: unset;
+    padding: 25px;
     &_leftSide {
       display: flex;
       flex-direction: column;
@@ -199,7 +200,7 @@
     }
     &_rightSide {
       &_paragraph {
-        overflow: visible;
+        overflow: scroll;
       }
     }
   }

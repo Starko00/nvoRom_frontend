@@ -9,6 +9,7 @@ import Project from "./components/ProjectPComponent/PP";
 import TeamMainPage from "./components/TeamPComponent/TeamMainPage";
 import NewsPage from "./pages/NewsPageComponent/NewsPage";
 import { ContactPage } from "./pages/ContactPage/ContactPage";
+import { Article } from "./components/NewsPComponent/ArticlePage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route exact path="/team" element={<TeamMainPage />} />
             <Route exact path="/news" element={<NewsPage />} />
             <Route exact path="/contact" element={<ContactPage/>}/>
+            <Route exact path="/article" element={<Article/>}/>
           </Routes>
         </Router>
         <Footer />
