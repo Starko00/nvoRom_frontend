@@ -55,9 +55,9 @@ const TeamMainPage = () => {
       {displayMemberId ? (
         rightCard
       ) : (
-        <span className={style.container_extra}>
+        <p className={style.container_extra}>
           Hey our team is amazing read more about them
-        </span>
+        </p>
       )}
     </div>
   );

@@ -3,10 +3,14 @@ import TeamStyle from "./Team.module.scss";
 import btnstyle from "../../style/Button.module.scss";
 import mainImg from "../images/Image_6.png";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Team = ({ teamText = "" }) => {
   const navigate = useNavigate();
   const style = TeamStyle;
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
   return (
     <div className={style.container}>
       <div className={style.container_text}>
@@ -17,6 +21,7 @@ const Team = ({ teamText = "" }) => {
             type="buttons"
             onClick={() => {
               navigate("/team");
+              window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
             }}
             className={`${btnstyle} ${style.container_text_holder_btn}`}
           >

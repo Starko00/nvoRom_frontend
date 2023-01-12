@@ -3,10 +3,14 @@ import AboutStyle from "./About.module.scss";
 import mainImg from "../images/Image_4.png";
 import btnstyle from "../../style/Button.module.scss";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const About = ({ aboutTittle = "", aboutText = "" }) => {
   const style = AboutStyle;
   const navigate = useNavigate();
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
   return (
     <div className={style.container}>
       <img className={style.container_img} src={mainImg} alt="target_img" />
@@ -18,6 +22,7 @@ const About = ({ aboutTittle = "", aboutText = "" }) => {
             type="buttons"
             onClick={() => {
               navigate("/about");
+              window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
             }}
             className={`${btnstyle} ${style.container_text_holder_btn}`}
           >

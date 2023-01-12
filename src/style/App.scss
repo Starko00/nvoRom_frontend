@@ -3,7 +3,7 @@
   --2nd-color: #434378;
   --hover-color: #4f4dca;
 }
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 //----------------------------------------------------------------------------
 ::-webkit-scrollbar {
   width: 10px;
@@ -26,7 +26,7 @@ body {
 //----------------------------------------------------------------------------
 body > * {
   box-sizing: border-box;
-  font-family: 'Rubik' !important;
+  font-family: "Rubik" !important;
 }
 //----------------------------------------------------------------------------
 .app_container {
@@ -86,16 +86,94 @@ body > * {
 }
 //----------------------------------------------------------------------------
 .Swiper3 {
+  min-width: 310px;
   padding-top: 155px !important;
   padding-left: 60px !important;
+  .swiper-button-prev {
+    background-image: url("../components/images/prev.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    width: 70px !important;
+    height: 70px !important;
+    top: 320px;
+  }
+  .swiper-button-next {
+    background-image: url("../components/images/next.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    width: 70px !important;
+    height: 70px !important;
+    top: 320px;
+  }
   .swiper-button-prev::after {
-    color: var(--main-color);
+    display: none;
   }
   .swiper-button-next::after {
-    color: var(--main-color);
+    display: none;
+  }
+}
+//----------------------------------------------------------------------------
+.Swiper4 {
+  .swiper-wrapper {
+    height: 390px;
+    padding: 20px 30px;
+  }
+  .swiper-button-prev {
+    background-image: url("../components/images/prev.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    width: 70px !important;
+    height: 70px !important;
+    top: 220px !important;
+    left: -1px !important;
+  }
+  .swiper-button-next {
+    background-image: url("../components/images/next.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    width: 70px !important;
+    height: 70px !important;
+    top: 220px !important;
+  }
+  .swiper-button-prev::after {
+    display: none;
+  }
+  .swiper-button-next::after {
+    display: none;
   }
 }
 
+//----------------------------------------------------------------------------
+@media only screen and (max-width: 119.9375em) {
+  .Swiper4 {
+    .swiper-wrapper {
+      padding: 20px 75px;
+    }
+  }
+}
+//----------------------------------------------------------------------------
+@media only screen and (max-width: 87.5em) {
+  .Swiper4 {
+    .swiper-wrapper {
+      padding: 20px 20px;
+    }
+  }
+}
+//----------------------------------------------------------------------------
+@media only screen and (max-width: 51.25em) {
+  .Swiper4 {
+    .swiper-button-prev {
+      display: none;
+    }
+    .swiper-button-next {
+      display: none;
+    }
+  }
+}
 //----------------------------------------------------------------------------
 @media only screen and (max-width: 49.9375em) {
   .Swiper3 {

@@ -17,12 +17,12 @@
     max-width: 1090px;
     margin-right: 10px;
     &_header {
-      font-size: 64px;
+      font-size: 4rem;
       font-weight: 600;
       color: #252525;
     }
     &_paragraph {
-      font-size: 32px;
+      font-size: 2rem;
       font-weight: 500;
       color: rgba(37, 37, 37, 0.79);
     }
@@ -34,7 +34,7 @@
         border-radius: 30px;
         width: 236px;
         height: 62px;
-        font-size: 33px;
+        font-size: 2rem;
       }
     }
   }
@@ -44,7 +44,7 @@
   .container {
     &_text {
       &_paragraph {
-        font-size: 28px;
+        font-size: 1.75rem;
       }
     }
   }
@@ -60,7 +60,7 @@
     }
     &_text {
       &_paragraph {
-        font-size: 25px;
+        font-size: 1.563rem;
       }
     }
   }

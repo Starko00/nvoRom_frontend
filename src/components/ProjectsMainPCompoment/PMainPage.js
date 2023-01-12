@@ -3,12 +3,11 @@ import MainStyle from "./ProjectsMainPage.module.scss";
 import SmallCard from "./cardMainSmall";
 import { CardMainBig } from "./CardMainBig";
 import { cardData } from "../../hooks/ProjectsMainPageHook/cardsData";
-import { bigCardData } from "../../hooks/ProjectsMainPageHook/bigCardsData";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/scss";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
-import { Pagination, Navigation } from "swiper";
+import { Navigation } from "swiper";
 import axios from "axios";
 
 const PMainPage = () => {

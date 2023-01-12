@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   align-content: center;
   &_header {
-    font-size: 55px;
+    font-size: 4rem;
     font-weight: 600;
     color: #252525;
   }
@@ -15,7 +15,7 @@
     justify-content: center;
     max-width: 1500px;
     &_paragraph {
-      font-size: 24px;
+      font-size: 1.563rem;
       color: #252525;
       padding-top: 1.875rem;
       height: 650px;
@@ -51,7 +51,6 @@
     &_components {
       flex-direction: column-reverse;
       &_img {
-        
         height: 558px;
       }
     }
@@ -72,7 +71,6 @@
       &_img {
         width: 300px;
         height: 300px;
-        
       }
     }
   }
