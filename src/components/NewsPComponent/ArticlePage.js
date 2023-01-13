@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/scss";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
-import { Navigation } from "swiper";
+import { Navigation, Pagination } from "swiper";
 export const Article = () => {
   const location = useLocation();
   console.log(location.state);
@@ -41,7 +41,7 @@ export const Article = () => {
             clickable: true,
           }}
           navigation={true}
-          modules={[Navigation]}
+          modules={[Navigation, Pagination]}
           className="Swiper4"
           breakpoints={{
             0: {

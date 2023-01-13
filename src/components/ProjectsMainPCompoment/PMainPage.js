@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/scss";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
-import { Navigation } from "swiper";
+import { Navigation, Pagination } from "swiper";
 import axios from "axios";
 
 const PMainPage = () => {
@@ -54,7 +54,7 @@ const PMainPage = () => {
             clickable: true,
           }}
           navigation={true}
-          modules={[Navigation]}
+          modules={[Navigation, Pagination]}
           className="Swiper3"
           breakpoints={{
             0: {

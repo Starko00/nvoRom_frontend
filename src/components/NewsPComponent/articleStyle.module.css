@@ -94,43 +94,47 @@
 
 @media (max-width: 820px) {
   .carouselHolder {
-    width: 60%;
-  }
-}
-@media (max-width: 670px) {
-  .carouselHolder {
     width: 65%;
   }
 }
-@media (max-width: 600px) {
-  .carouselHolder {
-    width: 70%;
-  }
-}
-@media (max-width: 570px) {
-  .carouselHolder {
-    width: 75%;
-  }
-}
-@media (max-width: 540px) {
-  .carouselHolder {
-    width: 80%;
-  }
-}
-@media (max-width: 500px) {
-  .carouselHolder {
-    width: 90%;
-  }
-}
-@media (max-width: 450px) {
-  .carouselHolder {
-    width: 100%;
-  }
-}
-
 @media (max-width: 750px) {
   .rightContainer p {
     font-size: 1rem;
     line-height: 1.2rem;
+  }
+}
+@media (max-width: 670px) {
+  .carouselHolder {
+    width: 70%;
+  }
+}
+@media (max-width: 600px) {
+  .carouselHolder {
+    width: 75%;
+  }
+}
+@media (max-width: 570px) {
+  .carouselHolder {
+    width: 80%;
+  }
+}
+@media (max-width: 540px) {
+  .carouselHolder {
+    width: 85%;
+  }
+}
+@media (max-width: 500px) {
+  .carouselHolder {
+    width: 100%;
+  }
+}
+@media (max-width: 450px) {
+  .carouselHolder {
+    width: 110%;
+  }
+}
+@media (max-width: 410px) {
+  .carouselHolder {
+    width: 100%;
   }
 }
