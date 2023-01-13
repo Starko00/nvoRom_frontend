@@ -171,6 +171,17 @@
 }
 //---------------------------------------------------------------------------------
 
+@media only screen and (max-width: 50em) {
+  .container {
+    align-items: center;
+    &_rightSide {
+      min-width: unset;
+      width: 420px;
+    }
+  }
+}
+//---------------------------------------------------------------------------------
+
 @media only screen and (max-width: 23.125em) {
   .container {
     &_leftSide {
