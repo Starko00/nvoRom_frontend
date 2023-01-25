@@ -15,12 +15,12 @@
     max-width: 910px;
     text-align: left;
     &_header {
-      font-size: 4rem;
+      font-size: 5rem;
       font-weight: 600;
       color: #252525;
     }
     &_paragraph {
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 500;
       color: rgba(37, 37, 37, 0.79);
     }
@@ -37,16 +37,7 @@
     }
   }
 }
-//---------------------------------------------------------------------------------
-@media only screen and (max-width: 98.75em) {
-  .container {
-    &_text {
-      &_paragraph {
-        font-size: 1.75rem;
-      }
-    }
-  }
-}
+
 //---------------------------------------------------------------------------------
 @media only screen and (max-width: 87.5em) {
   .container {
@@ -55,11 +46,6 @@
       max-height: 400px;
       min-width: unset;
       min-height: unset;
-    }
-    &_text {
-      &_paragraph {
-        font-size: 1.563rem;
-      }
     }
   }
 }
@@ -77,6 +63,9 @@
     &_text {
       margin: 20px 10px;
       text-align: center;
+      &_header {
+        font-size: 4rem;
+      }
       &_holder {
         justify-content: center;
       }
@@ -91,9 +80,9 @@
       display: none;
     }
     &_text {
-      font-size: 2.25rem;
+      font-size: 3rem;
       &_header {
-        font-size: 2.25rem;
+        font-size: 3rem;
         margin-bottom: 0.5rem;
       }
       &_paragraph {

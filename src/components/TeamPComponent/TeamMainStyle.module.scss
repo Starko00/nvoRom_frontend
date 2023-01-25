@@ -97,18 +97,18 @@
     margin-left: 40px;
     margin-right: 50px;
     &_header {
-      font-size: 55px;
+      font-size: 4rem;
       font-weight: 600;
       color: #252525;
     }
     &_paragraph {
-      font-size: 24px;
+      font-size: 2rem;
       font-weight: 500;
       color: #252525;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
     }
     &_text {
-      font-size: 20px;
+      font-size: 1.5rem;
       color: #252525;
       overflow-y: scroll;
       text-overflow: ellipsis;
@@ -127,6 +127,8 @@
   min-height: 45px;
   border-radius: 14.5px;
   padding-right: 10px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   margin-bottom: 16px;
   &_leftSide {
     &_title {
@@ -172,17 +174,6 @@
     &_center {
       height: 650px;
     }
-    &_rightSide {
-      &_header {
-        font-size: 45px;
-      }
-      &_paragraph {
-        font-size: 16px;
-      }
-      &_text {
-        font-size: 14px;
-      }
-    }
   }
   .card {
     width: 320px;
@@ -204,27 +195,11 @@
       height: unset;
     }
     &_rightSide {
-      margin-right: 20px;
+      margin-right: 40px;
     }
   }
   .card {
     width: 309px;
-  }
-}
-//----------------------------------------------------------------------------
-@media only screen and (max-width: 68.75em) {
-  .container {
-    &_rightSide {
-      &_header {
-        font-size: 40px;
-      }
-      &_paragraph {
-        font-size: 14px;
-      }
-      &_text {
-        font-size: 12px;
-      }
-    }
   }
 }
 //----------------------------------------------------------------------------
@@ -258,7 +233,14 @@
     &_rightSide {
       margin-top: 20px;
       margin-bottom: 50px;
+      &_header {
+        font-size: 3rem;
+      }
+      &_paragraph {
+        font-size: 1.5rem;
+      }
       &_text {
+        font-size: 1rem;
         max-height: 150px;
       }
     }
@@ -323,6 +305,7 @@
         font-size: 1.2rem;
       }
       &_text {
+        padding: 0 20px;
         font-size: 1rem;
       }
     }

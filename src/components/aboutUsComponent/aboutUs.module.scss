@@ -15,7 +15,7 @@
     justify-content: center;
     max-width: 1500px;
     &_paragraph {
-      font-size: 1.563rem;
+      font-size: 1.5rem;
       color: #252525;
       padding-top: 1.875rem;
       height: 650px;
@@ -60,6 +60,9 @@
 
 @media only screen and (max-width: 37.5em) {
   .container {
+    &_header {
+      font-size: 3rem;
+    }
     &_components {
       &_paragraph {
         font-size: 1rem;

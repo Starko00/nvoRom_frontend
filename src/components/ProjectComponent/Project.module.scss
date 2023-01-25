@@ -1,9 +1,10 @@
 .container {
   min-height: 54vh;
   background-color: #8685ef;
+  padding-top: 2.625rem;
   padding-left: 4.875rem;
   &_header {
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 3.813rem;
@@ -42,12 +43,12 @@
       text-align: left;
       width: 100%;
       &_header {
-        font-size: 1.625rem;
+        font-size: 1.5rem;
         font-weight: 600;
         color: #252525;
       }
       &_paragraph {
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 500;
         color: rgba(37, 37, 37, 0.79);
       }
@@ -72,6 +73,9 @@
 @media only screen and (max-width: 970px) {
   .container {
     padding-left: 1rem;
+    &_header {
+      font-size: 4rem;
+    }
   }
 }
 //------------------------------------------------------------------------------------------------------
@@ -79,7 +83,7 @@
   .container {
     padding: 1rem;
     &_header {
-      font-size: 2.25rem;
+      font-size: 3rem;
       text-align: center;
     }
   }
@@ -93,7 +97,7 @@
         text-align: left;
         width: 100%;
         &_header {
-          font-size: 1.35rem;
+          font-size: 1.5rem;
           text-align: center;
         }
         &_paragraph {
