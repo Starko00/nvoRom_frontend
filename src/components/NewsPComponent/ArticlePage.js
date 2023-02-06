@@ -7,9 +7,10 @@ import "swiper/scss";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
 import { Navigation, Pagination } from "swiper";
+
 export const Article = () => {
   const location = useLocation();
-  console.log(location.state);
+  console.log(location);
   const style = articleStyle;
   return (
     <div className={style.container}>

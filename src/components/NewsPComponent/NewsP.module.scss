@@ -55,7 +55,7 @@
       text-align: left;
       padding-top: 1.25rem;
       &_header {
-        font-size: 3.875rem;
+        font-size: 2.5rem;
         font-weight: 600;
         color: #252525;
       }
@@ -67,7 +67,11 @@
         padding-top: 1rem;
         --max-lines: 20;
         --line-height: 1.4;
-        max-height: calc(var(--max-lines) * 1em * var(--line-height));
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
         line-height: var(--line-height);
         overflow: hidden;
         position: relative;

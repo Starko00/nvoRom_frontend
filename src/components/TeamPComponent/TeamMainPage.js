@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import MainStyle from "./TeamMainStyle.module.scss";
-import pointyL from "../images/pointLeft.svg";
-import pointyU from "../images/pointUp.svg";
 import Cards from "./Cards";
 import TeamMemberInfo from "./TeamMemberInfo";
 import TeamMemberCard from "./TeamMemberCard";

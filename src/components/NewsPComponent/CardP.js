@@ -1,6 +1,7 @@
 import React from "react";
 import NewsPStyle from "./NewsP.module.scss";
 import btn from "../../style/Button.module.scss";
+import img from "../../components/images/elvis.jpg";
 
 const CardP = (props) => {
   const style = NewsPStyle;
@@ -9,17 +10,17 @@ const CardP = (props) => {
     <div className={style.card}>
       <div className={style.card_container}>
         <div className={style.card_container_imageHolder}>
-          <img src={props.card.img} alt="slika" />
+          <img src={props?.card?.photo} alt="slika" />
         </div>
         <div className={style.text}>
-          <h1 className={style.text_header}>"{props.card.name}"</h1>
-          <p className={style.text_paragraph}>{props.card.text}</p>
+          <h1 className={style.text_header}>"{props?.item?.hedline}"</h1>
+          <p className={style.text_paragraph}>{props?.item?.content}</p>
         </div>
         <div className={style.card_container_author}>
           <div className={style.card_container_author_left}>
-            <img src={props.card.authorImg} alt="slika" />
-            <p>{props.card.authorName} |</p>
-            <p>{props.card.date}</p>
+            <img src={img} alt="slika" />
+            <p>{props?.item?.author} |</p>
+            <p>{props?.item?.date}</p>
           </div>
           <button className={`${btnstyle} ${style.card_container_author_btn}`}>
             Read More

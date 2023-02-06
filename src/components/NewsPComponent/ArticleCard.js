@@ -3,6 +3,7 @@ import NewsPStyle from "./NewsP.module.scss";
 import btn from "../../style/Button.module.scss";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import img from "../../components/images/elvis.jpg";
 
 const ArticleCard = (props) => {
   const style = NewsPStyle;
@@ -23,7 +24,7 @@ const ArticleCard = (props) => {
         </div>
         <div className={style.ac_container_author}>
           <div className={style.ac_container_author_left}>
-            <img src={props.card.authorImg} alt="slika" />
+            <img src={img} alt="slika" />
             <p>{props.card.authorName} |</p>
             <p>{props.card.date}</p>
           </div>
