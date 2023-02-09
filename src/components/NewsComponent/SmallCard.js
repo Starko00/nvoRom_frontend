@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import smallstyle from "./News.module.scss";
 import btn from "../../style/Button.module.scss";
 import img from "../../components/images/elvis.jpg";
@@ -6,6 +7,7 @@ import img from "../../components/images/elvis.jpg";
 const SmallCard = (props) => {
   const style = smallstyle;
   const btnstyle = btn;
+  const navigate = useNavigate();
   return (
     <div className={style.small}>
       <div className={style.small_imageHolder}>
@@ -29,7 +31,12 @@ const SmallCard = (props) => {
                 .join(".")}
             </p>
           </div>
-          <button className={`${btnstyle} ${style.small_container_author_btn}`}>
+          <button
+            className={`${btnstyle} ${style.small_container_author_btn}`}
+            onClick={() => {
+              navigate("/article", { state: props.card });
+            }}
+          >
             Read More
           </button>
         </div>
