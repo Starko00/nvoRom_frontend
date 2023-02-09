@@ -21,6 +21,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "set BUILD_PATH=../phira-build&&react-scripts build",
+    "buildServer": "BUILD_PATH='../phira-build' react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
