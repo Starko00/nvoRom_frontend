@@ -11,7 +11,7 @@ const HomePage = () => {
   const [homePageData, setHomePageData] = useState();
   useEffect(() => {
     axios
-      .get("http://20.229.216.236/phiramenca/api/v1/landing/landingpage")
+      .get("/phiramenca/api/v1/landing/landingpage")
       .then((res) => {
         setHomePageData(res.data[0]);
       })
