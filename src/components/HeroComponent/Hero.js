@@ -10,7 +10,7 @@ const Hero = ({ heroTittle = "", heroText = "" }) => {
   return (
     <div className={style.hero}>
       <div className={style.hero_image}>
-        <img src='http://20.229.216.236/uploads/teamMembers/63af138e1c11400947ff2fc8----memeberImg----jasmina.jpg' alt="Hero" />
+        <img src='/uploads/teamMembers/63af138e1c11400947ff2fc8----memeberImg----jasmina.jpg' alt="Hero" />
       </div>
       <div className={style.hero_text}>
         <h1>{heroTittle}</h1>

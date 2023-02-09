@@ -14,7 +14,7 @@ const CardP = (props) => {
       <div className={style.newscard_container_left}>
         <div className={style.newscard_container_left_imageHolder}>
           <img
-            src={`http://20.229.216.236/uploads/news/${props.card.photo}`}
+            src={`/uploads/news/${props.card.photo}`}
             alt="slika"
           />
         </div>
