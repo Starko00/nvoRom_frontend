@@ -24,11 +24,12 @@ const PMainPage = () => {
 
   useEffect(() => {
     axios
-      .post("http://20.229.216.236/phiramenca/api/v1/projects", {
+      .post("/phiramenca/api/v1/projects", {
         yearFilter: projectInYear,
       })
       .then((res) => {
         setBigProjectData(res.data.data);
+        console.log(res.data);
       })
       .catch((err) => console.log(err));
   }, [projectInYear]);
@@ -45,7 +46,6 @@ const PMainPage = () => {
       </div>
       <div className={style.container_rightSide}>
         <Swiper
-          // slidesPerView={3}
           spaceBetween={0}
           slidesPerGroup={1}
           loop={false}

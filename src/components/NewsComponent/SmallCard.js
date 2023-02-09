@@ -20,7 +20,14 @@ const SmallCard = (props) => {
           <div className={style.small_container_author_left}>
             <img src={img} alt="slika" />
             <p>{props.card.author} |</p>
-            <p>{props.card.date}</p>
+            <p>
+              {props.card.date
+                .split("T")[0]
+                .replaceAll("-", ".")
+                .split(".")
+                .reverse()
+                .join(".")}
+            </p>
           </div>
           <button className={`${btnstyle} ${style.small_container_author_btn}`}>
             Read More

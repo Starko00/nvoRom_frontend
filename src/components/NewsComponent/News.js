@@ -8,13 +8,12 @@ const News = () => {
   const [data, setData] = useState("");
   const [firstSix, setFirstSix] = useState([]);
   const getData = async () => {
-    const res = await axios.get("http://20.229.216.236/phiramenca/api/v1/news");
+    const res = await axios.get("/phiramenca/api/v1/news");
     setData(res.data);
   };
   useEffect(() => {
     getData();
   }, []);
-
   //Using slice method to get 6 cards from array
   useEffect(() => {
     setFirstSix(data?.allArticles?.slice(1, 7));

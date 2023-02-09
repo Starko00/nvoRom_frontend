@@ -26,7 +26,15 @@ const ArticleCard = (props) => {
           <div className={style.ac_container_author_left}>
             <img src={img} alt="slika" />
             <p>{props.card.authorName} |</p>
-            <p>{props.card.date}</p>
+            <p>
+              {" "}
+              {props.card.date
+                .split("T")[0]
+                .replaceAll("-", ".")
+                .split(".")
+                .reverse()
+                .join(".")}
+            </p>
           </div>
           <button
             className={`${btnstyle} ${style.ac_container_author_btn}`}

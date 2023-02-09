@@ -19,6 +19,7 @@ const HomePage = () => {
         console.log(err);
       });
   }, []);
+  useEffect(() => {}, [homePageData]);
   return (
     <div>
       <Hero
@@ -27,8 +28,11 @@ const HomePage = () => {
       />
       <News />
       <Project />
-      <About aboutTittle = {homePageData?.visionAndMissionTittle} aboutText = {homePageData?.visionAndMissionText}/>
-      <Team  teamText = {homePageData?.ourtTeamText}/>
+      <About
+        aboutTittle={homePageData?.visionAndMissionTittle}
+        aboutText={homePageData?.visionAndMissionText}
+      />
+      <Team teamText={homePageData?.ourtTeamText} />
       <Partners />
     </div>
   );

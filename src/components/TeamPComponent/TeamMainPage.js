@@ -13,7 +13,7 @@ const TeamMainPage = () => {
   const [memberInfo, setTeamMemberInfo] = useState("0");
   useEffect(() => {
     axios
-      .get("http://20.229.216.236/phiramenca/api/v1/team/members")
+      .get("/phiramenca/api/v1/team/members")
       .then((res) => {
         setTeamMembers(res.data.allMembers);
       })
@@ -22,7 +22,7 @@ const TeamMainPage = () => {
   useEffect(() => {
     console.log(displayMemberId);
     axios
-      .post("http://20.229.216.236/phiramenca/api/v1/team/teamMember", {
+      .post("/phiramenca/api/v1/team/teamMember", {
         id: displayMemberId,
       })
       .then((res) => setTeamMemberInfo(res.data));

@@ -8,11 +8,12 @@ import axios from "axios";
 const ProjectPage = () => {
   const style = PPStyle;
   const location = useLocation();
+  console.log(location.state);
   const [project, setProject] = useState("");
   useEffect(() => {
     axios
-      .post("http://20.229.216.236/phiramenca/api/v1/getproject", {
-        _id: location.state.projectId,
+      .post("/phiramenca/api/v1/getproject", {
+        _id: location.state?.projectId,
       })
       .then((res) => {
         setProject(res.data.project);
@@ -26,10 +27,10 @@ const ProjectPage = () => {
   return (
     <div className={style.container}>
       <div className={style.container_leftSide}>
-        {project.projectImg ? (
+        {project?.projectImg ? (
           <img
             className={style.container_leftSide_img}
-            src={`http://20.229.216.236/uploads/projects/${project?.projectImg}`}
+            src={`/uploads/projects/${project?.projectImg}`}
             alt="About_img"
           />
         ) : (
@@ -46,10 +47,10 @@ const ProjectPage = () => {
 
       <div className={style.container_rightSide}>
         <h1 className={style.container_rightSide_header}>
-          {project.projectName}
+          {project?.projectName}
         </h1>
         <p className={style.container_rightSide_paragraph}>
-          {project.primaryText}
+          {project?.primaryText}
         </p>
         <div className={style.container_rightSide_btncontainer}>
           <button

@@ -12,17 +12,19 @@
     margin-left: 60px;
   }
   &_text {
-    max-width: 910px;
+    max-width: 1090px;
     text-align: left;
     &_header {
       font-size: 5rem;
       font-weight: 600;
       color: #252525;
+      margin-bottom: 1.5rem;
     }
     &_paragraph {
-      font-size: 1.5rem;
+      font-size: 2rem;
       font-weight: 500;
       color: rgba(37, 37, 37, 0.79);
+      line-height: 3rem;
     }
     &_holder {
       display: flex;
@@ -75,6 +77,7 @@
 //---------------------------------------------------------------------------------
 @media only screen and (max-width: 37.5em) {
   .container {
+    min-height: unset;
     padding: 10px 15px 20px 15px;
     &_img {
       display: none;
@@ -88,6 +91,7 @@
       &_paragraph {
         font-size: 1rem;
         text-align: left;
+        line-height: 1.5rem;
       }
       &_holder {
         margin-top: 15px;

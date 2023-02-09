@@ -5,7 +5,7 @@ import MainStyle from "./ProjectsMainPage.module.scss";
 
 const cardMainSmall = (props) => {
   const style = MainStyle;
-  
+
   return (
     <div className={`${cardStyle.card} ${style.smallCard}`}>
       <div className={cardStyle.card_left}>
@@ -23,7 +23,7 @@ const cardMainSmall = (props) => {
           className={`${btnStyle} ${style.smallCard_button}`}
           onClick={() => {
             console.log(props.card.date);
-            props.projectYear(props.card.date)
+            props.projectYear(props.card.date);
           }}
         >
           Read More

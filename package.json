@@ -18,6 +18,7 @@
     "swiper": "^8.4.5",
     "web-vitals": "^2.1.4"
   },
+  "proxy": "http://phiramenca.with-us.me/",
   "scripts": {
     "start": "react-scripts start",
     "build": "set BUILD_PATH=../phira-build&&react-scripts build",

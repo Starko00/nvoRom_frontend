@@ -20,7 +20,15 @@ const CardP = (props) => {
           <div className={style.card_container_author_left}>
             <img src={img} alt="slika" />
             <p>{props?.item?.author} |</p>
-            <p>{props?.item?.date}</p>
+            <p>
+              {" "}
+              {props?.item?.date
+                .split("T")[0]
+                .replaceAll("-", ".")
+                .split(".")
+                .reverse()
+                .join(".")}
+            </p>
           </div>
           <button className={`${btnstyle} ${style.card_container_author_btn}`}>
             Read More

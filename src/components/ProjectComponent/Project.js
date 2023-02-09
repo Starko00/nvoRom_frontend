@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ProjectStyle from "../ProjectComponent/Project.module.scss";
 import ProjectCard from "./ProjectCard";
 import { cardData } from "../../hooks/ProjectHook/ProjectCardsData";
 import { Swiper, SwiperSlide } from "swiper/react";
+import axios from "axios";
 import "swiper/scss";
 import "swiper/scss/pagination";
 import "swiper/scss/navigation";
@@ -10,6 +11,23 @@ import { Pagination, Navigation } from "swiper";
 
 const Project = () => {
   const style = ProjectStyle;
+  const [projectInYear, setProjectInYear] = useState("2022");
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .post("/phiramenca/api/v1/projects", {
+        yearFilter: "2022",
+      })
+      .then((res) => {
+        setData(res.data.data);
+        console.log(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, [projectInYear]);
+  console.log(projectInYear);
+  console.log();
   return (
     <div className={style.container}>
       <h1 className={style.container_header}>Izdvojeni projekti</h1>
@@ -52,10 +70,14 @@ const Project = () => {
           },
         }}
       >
-        {cardData?.map((card) => {
+        {data?.map((card) => {
           return (
             <SwiperSlide key={card.id}>
-              <ProjectCard card={card} key={card.id} />
+              <ProjectCard
+                card={card}
+                key={card.id}
+                projectYear={setProjectInYear}
+              />
             </SwiperSlide>
           );
         })}

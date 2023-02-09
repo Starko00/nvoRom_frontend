@@ -16,10 +16,7 @@ export const Article = () => {
     <div className={style.container}>
       <div className={style.leftContainer}>
         <div className={style.imgHolder}>
-          <img
-            src={`http://20.229.216.236/uploads/news/${location.state.photo}`}
-            alt="article"
-          />{" "}
+          <img src={`/uploads/news/${location.state.photo}`} alt="article" />{" "}
         </div>
         <div className={style.authorHolder}>
           <p>
