@@ -7,6 +7,7 @@ import img from "../../components/images/elvis.jpg";
 const Card = (props) => {
   const style = NewsStyle;
   const btnstyle = btn;
+  console.log(props,"Velika kartica")
   const navigate = useNavigate();
   return (
     <div className={style.card}>
@@ -20,7 +21,7 @@ const Card = (props) => {
         </div>
         <div className={style.card_container_author}>
           <div className={style.card_container_author_left}>
-            <img src={img} alt="slika" />
+            <img src={`/uploads/projects/${props.photo}`} alt="slika" />
             <p>{props?.card?.author} |</p>
             <p>
               {props?.card?.date

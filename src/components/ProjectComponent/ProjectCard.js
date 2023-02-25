@@ -11,7 +11,7 @@ const ProjectCard = (props) => {
   return (
     <div className={`${style.card}`}>
       <div className={style.card_imageHolder}>
-        <img src={props.card.projectImg} alt="slika" />
+        <img src={`/uploads/projects/${props.card.projectImg}`} alt="slika" />
       </div>
       <div className={style.card_container}>
         <div className={style.text}>

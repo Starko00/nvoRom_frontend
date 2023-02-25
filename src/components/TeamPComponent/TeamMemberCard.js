@@ -13,8 +13,8 @@ const TeamMemberCard = (props) => {
       <div className={style.container_center_imageHolder}>
         <img
           className={style.container_center_imageHolder_img}
-          src={`http://20.229.216.236/uploads/teamMembers/${props.card?.memeber?.teamMemberPhoto}`}
-          alt="Direktor"
+          src={`/uploads/teamMembers/${props.card?.memeber?.teamMemberPhoto}`}
+          alt="Team member"
         />
       </div>
       <div className={style.container_center_social}>
