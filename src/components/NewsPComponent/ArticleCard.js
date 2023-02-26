@@ -15,7 +15,7 @@ const ArticleCard = (props) => {
   return (
     <div className={style.ac}>
       <div className={style.ac_imageHolder}>
-        <img src={props.card.img} alt="slika" />
+        <img src={`/uploads/news/${props.card.photo}`} alt="slika" />
       </div>
       <div className={style.ac_container}>
         <div className={style.text}>

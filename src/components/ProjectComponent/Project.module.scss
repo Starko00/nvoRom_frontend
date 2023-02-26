@@ -35,7 +35,7 @@
   .card_container {
     background: white;
     position: absolute;
-    top: 175px;
+    top: 235px;
     border-radius: 10px;
     padding: 1.25rem;
 
@@ -51,11 +51,29 @@
         font-size: 1rem;
         font-weight: 500;
         color: rgba(37, 37, 37, 0.79);
+        --max-lines: 2.5;
+        --line-height: 1.4;
+        max-height: calc(var(--max-lines) * 1em * var(--line-height));
+        line-height: var(--line-height);
+        overflow: hidden;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          height: calc(1em * var(--line-height));
+          width: 100%;
+          bottom: 0;
+          pointer-events: none;
+          background: linear-gradient(to bottom, transparent, white);
+        }
       }
     }
     &_button {
       display: flex;
       justify-content: flex-end;
+      position: relative;
+      bottom: -115px;
+      right: 20px;
       &_btn {
         border-radius: 17px;
         width: 129px;
@@ -103,10 +121,13 @@
         &_paragraph {
           font-size: 0.825rem;
           margin-bottom: 0.5rem;
+          --max-lines: 4.5;
         }
       }
       &_button {
         justify-content: center;
+        bottom: -180px;
+        right: unset;
       }
     }
   }

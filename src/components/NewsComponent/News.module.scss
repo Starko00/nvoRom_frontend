@@ -43,7 +43,7 @@
     &_imageHolder {
       border-radius: 15px;
       max-width: 881px;
-      height: 587px;
+      height: 540px;
       overflow: hidden;
       img {
         object-fit: fill;
@@ -136,7 +136,7 @@
   .small_container {
     background: white;
     position: absolute;
-    top: 175px;
+    top: 200px;
     border-radius: 10px;
     padding: 1rem;
 
@@ -152,7 +152,7 @@
         font-size: 1rem;
         font-weight: 500;
         color: rgba(37, 37, 37, 0.79);
-        --max-lines: 5;
+        --max-lines: 2.5;
         --line-height: 1.4;
         max-height: calc(var(--max-lines) * 1em * var(--line-height));
         line-height: var(--line-height);
@@ -173,8 +173,11 @@
     &_author {
       display: flex;
       align-items: center;
-      margin-top: 2rem;
-      justify-content: space-between;
+      justify-content: space-around;
+      position: relative;
+      bottom: -120px;
+      width: 100%;
+      margin: auto;
       &_left {
         display: flex;
         align-items: center;
@@ -335,6 +338,7 @@
       }
 
       &_author {
+        width: 90%;
         &_left {
           img {
             width: 1.55rem;
@@ -386,20 +390,20 @@
         }
       }
       &_author {
-        margin-top: 1.5rem;
         &_left {
           &_img {
             width: 2rem;
             height: 2rem;
           }
           p {
-            font-size: 0.8rem;
+            font-size: 0.65rem;
           }
         }
         &_btn {
           width: 80px;
           height: 36px;
           font-size: 12px;
+          margin-left: 15px;
         }
       }
     }

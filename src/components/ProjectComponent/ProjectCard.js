@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 const ProjectCard = (props) => {
   const style = ProjectStyle;
   const navigate = useNavigate();
-
   return (
     <div className={`${style.card}`}>
       <div className={style.card_imageHolder}>
@@ -18,16 +17,16 @@ const ProjectCard = (props) => {
           <h1 className={style.text_header}>{props.card.projectName}</h1>
           <p className={style.text_paragraph}>{props.card.secodnaryText}</p>
         </div>
-        <div className={style.card_container_button}>
-          <button
-            className={`${btnStyle} ${style.card_container_button_btn}`}
-            onClick={() => {
-              navigate("/project", { state: { projectId: props.card._id } });
-            }}
-          >
-            Read More
-          </button>
-        </div>
+      </div>
+      <div className={style.card_container_button}>
+        <button
+          className={`${btnStyle} ${style.card_container_button_btn}`}
+          onClick={() => {
+            navigate("/project", { state: { projectId: props.card._id } });
+          }}
+        >
+          Read More
+        </button>
       </div>
     </div>
   );

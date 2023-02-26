@@ -7,13 +7,12 @@ import img from "../../components/images/elvis.jpg";
 const Card = (props) => {
   const style = NewsStyle;
   const btnstyle = btn;
-  console.log(props,"Velika kartica")
   const navigate = useNavigate();
   return (
     <div className={style.card}>
       <div className={style.card_container}>
         <div className={style.card_container_imageHolder}>
-          <img src={props?.card?.photo} alt="slika" />
+          <img src={`/uploads/news/${props?.card?.photo}`} alt="slika" />
         </div>
         <div className={style.text}>
           <h1 className={style.text_header}>"{props?.card?.hedline}"</h1>
@@ -21,7 +20,7 @@ const Card = (props) => {
         </div>
         <div className={style.card_container_author}>
           <div className={style.card_container_author_left}>
-            <img src={`/uploads/projects/${props.photo}`} alt="slika" />
+            <img src={`/uploads/news/${props?.card?.photo}`} alt="slika" />
             <p>{props?.card?.author} |</p>
             <p>
               {props?.card?.date

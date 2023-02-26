@@ -10,7 +10,7 @@ const CardP = (props) => {
     <div className={style.card}>
       <div className={style.card_container}>
         <div className={style.card_container_imageHolder}>
-          <img src={props?.card?.photo} alt="slika" />
+          <img src={`/uploads/news/${props?.item?.photo}`} alt="slika" />
         </div>
         <div className={style.text}>
           <h1 className={style.text_header}>"{props?.item?.hedline}"</h1>

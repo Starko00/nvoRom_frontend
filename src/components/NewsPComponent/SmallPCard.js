@@ -12,7 +12,7 @@ const SmallPCard = (props) => {
   return (
     <div className={style.small}>
       <div className={style.small_imageHolder}>
-        <img src={props.card.photo} alt="slika" />
+        <img src={`/uploads/news/${props.card.photo}`} alt="slika" />
       </div>
       <div className={style.small_container}>
         <div className={style.text}>

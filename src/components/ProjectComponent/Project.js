@@ -22,12 +22,9 @@ const Project = () => {
       })
       .then((res) => {
         setData(res.data.data);
-        console.log(res.data);
       })
       .catch((err) => console.log(err));
   }, [projectInYear]);
-  console.log(projectInYear);
-  console.log();
   return (
     <div className={style.container}>
       <h1 className={style.container_header}>Izdvojeni projekti</h1>
@@ -72,10 +69,10 @@ const Project = () => {
       >
         {data?.map((card) => {
           return (
-            <SwiperSlide key={card.id}>
+            <SwiperSlide key={card._id}>
               <ProjectCard
                 card={card}
-                key={card.id}
+                key={card._id}
                 projectYear={setProjectInYear}
               />
             </SwiperSlide>
