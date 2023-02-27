@@ -16,7 +16,7 @@ export const CardMainBig = (props) => {
             alt="About_img"
           />
         ) : (
-          "No project img"
+          "The project doesn't have an img"
         )}
       </div>
       <div className={style.card_container}>
