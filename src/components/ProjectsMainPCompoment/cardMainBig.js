@@ -24,17 +24,17 @@ export const CardMainBig = (props) => {
           <h1 className={style.text_header}>{props.card.projectName}</h1>
           <p className={style.text_paragraph}>{props.card.secodnaryText}</p>
         </div>
-      </div>
-      <div className={style.card_container_button}>
-        <button
-          type="buttons"
-          onClick={() => {
-            navigate("/project", { state: { projectId: props.card._id } });
-          }}
-          className={`${btnStyle} ${style.card_container_button_btn}`}
-        >
-          Read More
-        </button>
+        <div className={style.card_container_button}>
+          <button
+            type="buttons"
+            onClick={() => {
+              navigate("/project", { state: { projectId: props.card._id } });
+            }}
+            className={`${btnStyle} ${style.card_container_button_btn}`}
+          >
+            Read More
+          </button>
+        </div>
       </div>
     </div>
   );
