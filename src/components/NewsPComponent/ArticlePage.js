@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import articleStyle from "./articleStyle.module.css";
 import { smallCardsData } from "../../hooks/NewsHook/smallCardsData";
@@ -7,11 +8,21 @@ import "swiper/scss";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
 import { Navigation, Pagination } from "swiper";
+import axios from "axios";
 
 export const Article = () => {
   const location = useLocation();
-  console.log(location);
   const style = articleStyle;
+  const [data, setData] = useState("");
+
+  const getData = async () => {
+    const res = await axios.get("/phiramenca/api/v1/news");
+    setData(res.data);
+  };
+  console.log(data.allArticles);
+  useEffect(() => {
+    getData();
+  }, []);
   return (
     <div className={style.container}>
       <div className={style.leftContainer}>
@@ -72,10 +83,10 @@ export const Article = () => {
             },
           }}
         >
-          {smallCardsData?.map((card) => {
+          {data?.allArticles?.map((card) => {
             return (
-              <SwiperSlide key={card.id}>
-                <ArticleCard card={card} key={card.id} />
+              <SwiperSlide key={card._id}>
+                <ArticleCard card={card} key={card._id} />
               </SwiperSlide>
             );
           })}

@@ -19,29 +19,29 @@ const SmallPCard = (props) => {
           <h1 className={style.text_header}>"{props.card.hedline}"</h1>
           <p className={style.text_paragraph}>{props.card.content}</p>
         </div>
-        <div className={style.small_container_author}>
-          <div className={style.small_container_author_left}>
-            <img src={img} alt="slika" />
-            <p>{props.card.author} |</p>
-            <p>
-              {" "}
-              {props.card.date
-                .split("T")[0]
-                .replaceAll("-", ".")
-                .split(".")
-                .reverse()
-                .join(".")}
-            </p>
-          </div>
-          <button
-            className={`${btnstyle} ${style.small_container_author_btn}`}
-            onClick={() => {
-              navigate("/article", { state: props.card });
-            }}
-          >
-            Read More
-          </button>
+      </div>
+      <div className={style.small_container_author}>
+        <div className={style.small_container_author_left}>
+          <img src={img} alt="slika" />
+          <p>{props.card.author} |</p>
+          <p>
+            {" "}
+            {props.card.date
+              .split("T")[0]
+              .replaceAll("-", ".")
+              .split(".")
+              .reverse()
+              .join(".")}
+          </p>
         </div>
+        <button
+          className={`${btnstyle} ${style.small_container_author_btn}`}
+          onClick={() => {
+            navigate("/article", { state: props.card });
+          }}
+        >
+          Read More
+        </button>
       </div>
     </div>
   );

@@ -32,7 +32,7 @@
   color: #ffffff;
   max-width: 860px;
   min-width: 723px;
-  height: 902px;
+  height: 920px;
   border-radius: 15px;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.74);
   margin-bottom: 30px;
@@ -65,7 +65,7 @@
         color: rgba(37, 37, 37, 0.79);
         max-width: 43.375rem;
         padding-top: 1rem;
-        --max-lines: 20;
+        --max-lines: 2;
         --line-height: 1.4;
         display: -webkit-box;
         -webkit-line-clamp: 2;
@@ -137,7 +137,7 @@
   .small_container {
     background: white;
     position: absolute;
-    top: 175px;
+    top: 200px;
     border-radius: 10px;
     padding: 1rem;
 
@@ -153,7 +153,7 @@
         font-size: 1rem;
         font-weight: 500;
         color: rgba(37, 37, 37, 0.79);
-        --max-lines: 5;
+        --max-lines: 2.5;
         --line-height: 1.4;
         max-height: calc(var(--max-lines) * 1em * var(--line-height));
         line-height: var(--line-height);
@@ -174,8 +174,11 @@
     &_author {
       display: flex;
       align-items: center;
-      margin-top: 2rem;
-      justify-content: space-between;
+      justify-content: space-around;
+      position: relative;
+      bottom: -135px;
+      width: 100%;
+      margin: auto;
       &_left {
         display: flex;
         align-items: center;
@@ -225,7 +228,7 @@
   .ac_container {
     background: white;
     position: absolute;
-    top: 175px;
+    top: 200px;
     border-radius: 10px;
     padding: 1rem;
 
@@ -241,7 +244,7 @@
         font-size: 0.7rem;
         font-weight: 500;
         color: rgba(37, 37, 37, 0.79);
-        --max-lines: 5;
+        --max-lines: 2.5;
         --line-height: 1.4;
         max-height: calc(var(--max-lines) * 1em * var(--line-height));
         line-height: var(--line-height);
@@ -262,8 +265,11 @@
     &_author {
       display: flex;
       align-items: center;
-      margin-top: 2rem;
-      justify-content: space-between;
+      justify-content: space-around;
+      position: relative;
+      bottom: -65px;
+      width: 100%;
+      margin: auto;
       &_left {
         display: flex;
         align-items: center;
@@ -353,6 +359,13 @@
     }
     :nth-child(5) {
       display: unset;
+    }
+  }
+  .small {
+    .small_container {
+      &_author {
+        bottom: -120px;
+      }
     }
   }
 }
@@ -512,6 +525,7 @@
         }
       }
       &_author {
+        bottom: -95px;
         margin-top: 1.5rem;
         &_left {
           &_img {

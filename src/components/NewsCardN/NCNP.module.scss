@@ -2,7 +2,7 @@
   display: flex;
   color: #ffffff;
   height: auto;
-  
+
   width: 90%;
   --max-lines: 10;
   --line-height: 1.4;
@@ -113,6 +113,10 @@
     &_right {
       &_text {
         --max-lines: 10;
+      }
+      &_button {
+        justify-content: center;
+        margin-left: unset;
       }
     }
   }
