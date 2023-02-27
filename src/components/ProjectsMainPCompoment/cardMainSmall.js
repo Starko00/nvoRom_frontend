@@ -22,7 +22,6 @@ const cardMainSmall = (props) => {
         <button
           className={`${btnStyle} ${style.smallCard_button}`}
           onClick={() => {
-            console.log(props.card.date);
             props.projectYear(props.card.date);
           }}
         >
