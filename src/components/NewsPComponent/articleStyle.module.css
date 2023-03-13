@@ -2,6 +2,7 @@
   min-height: 100%;
   padding: 40px;
   display: grid;
+  justify-content: center;
   column-gap: 2rem;
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: auto auto 1fr;
@@ -74,6 +75,11 @@
   .carouselHolder {
     width: 70%;
     margin: auto;
+  }
+}
+@media (min-width: 1600px) {
+  .container {
+    grid-template-columns: repeat(2, 40%);
   }
 }
 
