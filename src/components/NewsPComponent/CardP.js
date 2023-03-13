@@ -2,10 +2,12 @@ import React from "react";
 import NewsPStyle from "./NewsP.module.scss";
 import btn from "../../style/Button.module.scss";
 import img from "../../components/images/elvis.jpg";
+import { useNavigate } from "react-router-dom";
 
 const CardP = (props) => {
   const style = NewsPStyle;
   const btnstyle = btn;
+  const navigate = useNavigate();
   return (
     <div className={style.card}>
       <div className={style.card_container}>
@@ -30,7 +32,12 @@ const CardP = (props) => {
                 .join(".")}
             </p>
           </div>
-          <button className={`${btnstyle} ${style.card_container_author_btn}`}>
+          <button
+            className={`${btnstyle} ${style.card_container_author_btn}`}
+            onClick={() => {
+              navigate("/article", { state: props.item });
+            }}
+          >
             Read More
           </button>
         </div>

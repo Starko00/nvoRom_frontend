@@ -14,8 +14,8 @@ const NewsPage = () => {
   }, []);
 
   const style = PageStyle;
-  const cardData = articleData?.map((card) => {
-    return <NewsCardNewsPage card={card} key={card.id} />;
+  const cardData = articleData?.map((card, id) => {
+    return <NewsCardNewsPage card={card} key={id} />;
   });
   return (
     <div className={style.main}>

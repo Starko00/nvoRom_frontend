@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import NewsStyle from "./News.module.scss";
 import btn from "../../style/Button.module.scss";
-import img from "../../components/images/elvis.jpg";
 
 const Card = (props) => {
   const style = NewsStyle;

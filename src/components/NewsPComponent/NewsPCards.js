@@ -24,7 +24,7 @@ const NewsP = () => {
 
   const style = NewsPStyle;
 
-  const firstCard = data.allArticles?.[0];
+  const firstCard = data?.allArticles?.[0];
 
   const smallCardElements = firstSix?.map((item) => {
     return <SmallPCard key={item._id} card={item} />;

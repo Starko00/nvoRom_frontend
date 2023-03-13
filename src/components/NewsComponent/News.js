@@ -26,6 +26,8 @@ const News = () => {
     return <SmallCard card={card} key={card._id} />;
   });
 
+  console.log(data.allArticles);
+
   return (
     <div className={style.container}>
       <h1>Aktuelnosti</h1>
