@@ -17,6 +17,7 @@ export const Article = () => {
   const getData = async () => {
     const res = await axios.get("/phiramenca/api/v1/news");
     setData(res.data);
+    console.log(res);
   };
   useEffect(() => {
     getData();

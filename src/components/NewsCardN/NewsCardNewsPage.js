@@ -8,15 +8,12 @@ const CardP = (props) => {
   const style = NewsPStyle;
   const btnstyle = btn;
   const date = props.card.date;
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <div className={style.newscard_container}>
       <div className={style.newscard_container_left}>
         <div className={style.newscard_container_left_imageHolder}>
-          <img
-            src={`/uploads/news/${props.card.photo}`}
-            alt="slika"
-          />
+          <img src={`/uploads/news/${props.card.photo}`} alt="slika" />
         </div>
         <div className={style.newscard_container_left_author}>
           <div className={style.newscard_container_left_author}>
@@ -25,7 +22,7 @@ const CardP = (props) => {
               src={img}
               alt="slika"
             />
-            <p>{props.card.author}</p>
+            <p>{props.card.author} |</p>
             <p>
               {date
                 .split("T")[0]
@@ -49,8 +46,8 @@ const CardP = (props) => {
         <div className={style.newscard_container_right_button}>
           <button
             className={`${btnstyle} ${style.newscard_container_right_button_btn}`}
-            onClick ={()=>{
-              navigate('/article',{state:props.card})
+            onClick={() => {
+              navigate("/article", { state: props.card });
             }}
           >
             Read More

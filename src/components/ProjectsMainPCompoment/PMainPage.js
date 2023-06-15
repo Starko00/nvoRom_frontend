@@ -14,7 +14,16 @@ const PMainPage = () => {
   const style = MainStyle;
   //----------------------------------------------------------------------------------
   const [projectInYear, setProjectInYear] = useState();
-  const smallCardElements = cardData.map((card) => {
+  const [data, setData] = useState();
+
+  const getData = async () => {
+    const res = await axios.get("/phiramenca/api/v1/projects");
+    setData(res?.data?.projectList);
+  };
+  useEffect(() => {
+    getData();
+  }, []);
+  const smallCardElements = data?.map((card) => {
     return (
       <SmallCard card={card} key={card.id} projectYear={setProjectInYear} />
     );
@@ -29,7 +38,7 @@ const PMainPage = () => {
       })
       .then((res) => {
         setBigProjectData(res.data.data);
-        console.log(res.data);
+        console.log(res.data,"Big card data");
       })
       .catch((err) => console.log(err));
   }, [projectInYear]);

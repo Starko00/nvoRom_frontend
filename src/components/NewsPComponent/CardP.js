@@ -21,7 +21,7 @@ const CardP = (props) => {
         <div className={style.card_container_author}>
           <div className={style.card_container_author_left}>
             <img src={img} alt="slika" />
-            <p>{props?.item?.author} |</p>
+            <p>{props?.item?.author} | </p>
             <p>
               {" "}
               {props?.item?.date
