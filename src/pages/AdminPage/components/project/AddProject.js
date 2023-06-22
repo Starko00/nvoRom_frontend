@@ -32,7 +32,7 @@ const AddProject = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(selectedOption)
+    console.log(selectedOption);
     try {
       const formData = new FormData();
       formData.append("id", selectedOption);
@@ -59,6 +59,7 @@ const AddProject = () => {
           projectYear: projectYear,
         })
         .then((res) => console.log(res));
+      window.location.reload();
     } catch (error) {
       console.log("Error posting the article:", error);
     }

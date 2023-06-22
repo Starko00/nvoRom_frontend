@@ -6,4 +6,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.editorText span {
+  font-size: unset !important;
+}
 
+.editorText h1 {
+  line-height: 80px;
+}
+.editorText h2 {
+  line-height: 60px;
+}
+.editorText h3 {
+  line-height: 40px;
+}
+.editorText p {
+  line-height: 35px;
+}

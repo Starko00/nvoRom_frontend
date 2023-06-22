@@ -30,6 +30,7 @@ const AddTeamMember = () => {
         .then((res) => console.log(res));
 
       console.log("Article posted successfully!");
+      window.location.reload();
     } catch (error) {
       console.log("Error posting the article:", error);
     }

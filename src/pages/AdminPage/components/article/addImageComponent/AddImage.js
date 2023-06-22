@@ -5,24 +5,23 @@ import axios from "axios";
 const AddImage = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const style = AddImageStyle;
-  //---------------------------------------------------------------
 
   const [selectedOption, setSelectedOption] = useState("");
-
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
   };
+
   const [data, setData] = useState("");
 
   const getData = async () => {
     const res = await axios.get("/phiramenca/api/v1/news");
     setData(res.data.allArticles);
   };
+
   useEffect(() => {
     getData();
   }, []);
 
-  //---------------------------------------------------------------
   const handleImageChange = (event) => {
     setSelectedImage(event.target.files[0]);
   };
@@ -38,11 +37,13 @@ const AddImage = () => {
         .post("/phiramenca/api/v1/news/articlePhoto", formData)
         .then((res) => console.log(res));
       console.log("Image posted successfully!");
+      window.location.reload();
       getData();
     } catch (error) {
       console.log("Error posting the image:", error);
     }
   };
+
   return (
     <div className={style.container}>
       <div className={style.container_left}>
@@ -61,7 +62,11 @@ const AddImage = () => {
       <div className={style.right}>
         <h2>Image Upload</h2>
         <form onSubmit={handleSubmit}>
-          <input type="file" onChange={handleImageChange} />
+          <input
+            type="file"
+            accept=".jpg,.jpeg,.png" // Allow JPG, JPEG, and PNG images
+            onChange={handleImageChange}
+          />
           <button type="submit">Upload</button>
         </form>
       </div>

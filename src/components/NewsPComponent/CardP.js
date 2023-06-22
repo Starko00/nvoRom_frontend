@@ -16,7 +16,7 @@ const CardP = (props) => {
         </div>
         <div className={style.text}>
           <h1 className={style.text_header}>"{props?.item?.hedline}"</h1>
-          <p className={style.text_paragraph}>{props?.item?.content}</p>
+          <div className={style.text_paragraph} dangerouslySetInnerHTML={{ __html: props?.item?.content }}></div>
         </div>
         <div className={style.card_container_author}>
           <div className={style.card_container_author_left}>

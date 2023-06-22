@@ -93,7 +93,8 @@ export const Article = () => {
       </div>
       <div className={style.rightContainer}>
         <h1>{location.state.hedline}</h1>
-        <p>{location.state.content}</p>
+        <div className={`${style.text_paragraph}  ${"editorText"}` } dangerouslySetInnerHTML={{ __html:location.state.content }}></div>
+
         <div className={style.tagHolder}>
           {location.state.tags.map((tag, id) => {
             return (

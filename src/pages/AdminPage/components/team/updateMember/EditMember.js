@@ -13,57 +13,74 @@ const EditMember = () => {
   const [socialMediaInstagram, setSocialMediaInstagram] = useState(
     "https://www.instagram.com/"
   );
-  const [socialMediaFacebook, setsocialMediaFacebook] = useState(
+  const [socialMediaFacebook, setSocialMediaFacebook] = useState(
     "https://www.facebook.com/"
   );
   const [selectedOption, setSelectedOption] = useState("");
+  const [data, setData] = useState([]);
 
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
+    handleUserSelection(event.target.value);
   };
-  const [data, setData] = useState("");
 
-  const getData = async () => {
-    const res = await axios.get("/phiramenca/api/v1/team/members");
-    setData(res.data.allMembers);
-  };
-  useEffect(() => {
-    getData();
-  }, []);
-  const handleClick = async () => {
+  const fetchData = async () => {
     try {
-      await axios
-        .patch("/phiramenca/api/v1/team/members", {
-          data: {
-            socialMediaLinkedIn: socialMediaLinkedIn,
-            socialMediaInstagram: socialMediaInstagram,
-            socialMediaFacebook: socialMediaFacebook,
-            biography: biography,
-            position: position,
-            name: name,
-          },
-          id: selectedOption,
-        })
-        .then((res) => console.log(res));
-
-      console.log("Article posted successfully!");
+      const response = await axios.get("/phiramenca/api/v1/team/members");
+      setData(response.data.allMembers);
     } catch (error) {
-      console.log("Error posting the article:", error);
+      console.log("Error fetching data:", error);
     }
   };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const handleUserSelection = (userId) => {
+    const selectedUser = data.find((user) => user._id === userId);
+
+    if (selectedUser) {
+      setName(selectedUser.name);
+      setPosition(selectedUser.position);
+      setBiography(selectedUser.biography);
+      setSocialMediaLinkedIn(selectedUser.socialMediaLinkedIn);
+      setSocialMediaInstagram(selectedUser.socialMediaInstagram);
+      setSocialMediaFacebook(selectedUser.socialMediaFacebook);
+    }
+  };
+
+  const handleClick = async () => {
+    try {
+      await axios.patch("/phiramenca/api/v1/team/members", {
+        data: {
+          socialMediaLinkedIn,
+          socialMediaInstagram,
+          socialMediaFacebook,
+          biography,
+          position,
+          name,
+        },
+        id: selectedOption,
+      });
+      console.log("Member updated successfully!");
+      window.location.reload();
+    } catch (error) {
+      console.log("Error updating the member:", error);
+    }
+  };
+
   return (
     <div className={style.container}>
       <div className={style.container_left}>
         <h1>Select</h1>
         <select value={selectedOption} onChange={handleOptionChange}>
           <option value="">Select an option</option>
-          {Object.values(data).map((item) => {
-            return (
-              <option key={item._id} value={item._id}>
-                {item.name}
-              </option>
-            );
-          })}
+          {data.map((item) => (
+            <option key={item._id} value={item._id}>
+              {item.name}
+            </option>
+          ))}
         </select>
       </div>
       <table>
@@ -79,6 +96,7 @@ const EditMember = () => {
           <tr>
             <td>
               <textarea
+                value={name}
                 onChange={(e) => {
                   setName(e.target.value);
                 }}
@@ -86,6 +104,7 @@ const EditMember = () => {
             </td>
             <td>
               <textarea
+                value={position}
                 onChange={(e) => {
                   setPosition(e.target.value);
                 }}
@@ -93,6 +112,7 @@ const EditMember = () => {
             </td>
             <td>
               <textarea
+                value={biography}
                 onChange={(e) => {
                   setBiography(e.target.value);
                 }}
@@ -100,17 +120,17 @@ const EditMember = () => {
             </td>
             <td>
               <textarea
+                value={socialMediaFacebook}
                 placeholder="https://www.facebook.com/"
-                type="text-area"
                 onChange={(e) => {
-                  setsocialMediaFacebook(e.target.value);
+                  setSocialMediaFacebook(e.target.value);
                 }}
               />
             </td>
             <td>
               <textarea
+                value={socialMediaInstagram}
                 placeholder="https://www.instagram.com/"
-                type="text-area"
                 onChange={(e) => {
                   setSocialMediaInstagram(e.target.value);
                 }}
@@ -118,8 +138,8 @@ const EditMember = () => {
             </td>
             <td>
               <textarea
+                value={socialMediaLinkedIn}
                 placeholder="https://www.linkedin.com/"
-                type="text-area"
                 onChange={(e) => {
                   setSocialMediaLinkedIn(e.target.value);
                 }}
@@ -129,7 +149,7 @@ const EditMember = () => {
         </tbody>
       </table>
       <button className={style.button} onClick={handleClick}>
-        Add
+        Update
       </button>
     </div>
   );

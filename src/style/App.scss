@@ -261,13 +261,31 @@ th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+  text-align: center;
 }
 
 tr:nth-child(even) {
   background-color: #dddddd;
 }
-textarea {
+input {
   padding: 5px;
-  min-height: 10px;
+  height: auto;
   font-size: large;
+}
+
+.wrapper-class {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  max-width: 800px;
+  min-height: 15rem;
+}
+.editor-class {
+  background-color: white;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  height: 300px !important;
+  overflow-y: auto;
+}
+.toolbar-class {
+  border: 1px solid #ccc;
 }

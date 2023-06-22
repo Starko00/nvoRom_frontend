@@ -1,7 +1,6 @@
 import React from "react";
 import HeroStyle from "./Hero.module.scss";
 import ButtonStyle from "../../style/Button.module.scss";
-import landing from "../images/hero.png";
 import { useNavigate } from "react-router-dom";
 
 const Hero = ({ heroTittle = "", heroText = "" }) => {
@@ -10,11 +9,13 @@ const Hero = ({ heroTittle = "", heroText = "" }) => {
   return (
     <div className={style.hero}>
       <div className={style.hero_image}>
-        <img src='/uploads/teamMembers/63af138e1c11400947ff2fc8----memeberImg----jasmina.jpg' alt="Hero" />
+        <img
+          src="/uploads/teamMembers/63af138e1c11400947ff2fc8----memeberImg----jasmina.jpg"
+          alt="Hero"
+        />
       </div>
       <div className={style.hero_text}>
         <h1>{heroTittle}</h1>
-        <h3>PHIREN AMENCA</h3>
         <p>{heroText}</p>
         <div className={style.hero_holder}>
           <button

@@ -38,6 +38,7 @@ const AddProjectImage = () => {
         .post("/phiramenca/api/v1/projectImg", formData)
         .then((res) => console.log(res));
       console.log("Image posted successfully!");
+      window.location.reload();
       getData();
     } catch (error) {
       console.log("Error posting the image:", error);
@@ -52,7 +53,7 @@ const AddProjectImage = () => {
           {Object.values(data).map((item) => {
             return (
               <option key={item._id} value={item._id}>
-              {item.projectName}
+                {item.projectName}
               </option>
             );
           })}

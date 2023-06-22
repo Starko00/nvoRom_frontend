@@ -39,9 +39,12 @@ const CardP = (props) => {
           <h1 className={style.newscard_container_right_text_header}>
             {props.card.hedline}
           </h1>
-          <p className={style.newscard_container_right_text_paragraph}>
-            {props.card.content}
-          </p>
+          <div
+            className={`${
+              style.newscard_container_right_text_paragraph
+            }  ${"editorText"}`}
+            dangerouslySetInnerHTML={{ __html: props.card.content }}
+          ></div>
         </div>
         <div className={style.newscard_container_right_button}>
           <button

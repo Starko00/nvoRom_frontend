@@ -20,7 +20,10 @@ const ArticleCard = (props) => {
       <div className={style.ac_container}>
         <div className={style.text}>
           <h1 className={style.text_header}>"{props.card.hedline}"</h1>
-          <p className={style.text_paragraph}>{props.card.content}</p>
+          <div
+            className={`${style.text_paragraph}  ${"editorText"}` }
+            dangerouslySetInnerHTML={{ __html: props?.card?.content }}
+          ></div>
         </div>
       </div>
       <div className={style.ac_container_author}>

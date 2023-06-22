@@ -26,6 +26,7 @@ const DeleteArticle = () => {
         },
       })
       .then((res) => console.log(res));
+    window.location.reload();
   };
 
   return (
@@ -35,7 +36,7 @@ const DeleteArticle = () => {
         {Object.values(data).map((item) => {
           return (
             <option key={item._id} value={item._id}>
-            {item.hedline}
+              {item.hedline}
             </option>
           );
         })}

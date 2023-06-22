@@ -48,11 +48,8 @@ const Admin = () => {
           </Link>
         </DropdownMenu>
         <DropdownMenu label={"Landing Page"}>
-          <Link className={style.container_link} to="article">
-            Add Article
-          </Link>
-          <Link className={style.container_link} to="delete_article">
-            Delete Article
+          <Link className={style.container_link} to="update_landing_page">
+            Update Landing Page
           </Link>
         </DropdownMenu>
       </nav>

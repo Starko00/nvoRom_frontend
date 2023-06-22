@@ -26,6 +26,7 @@ const DeleteProject = () => {
           _id: selectedOption,
         })
         .then((res) => console.log(res));
+      window.location.reload();
       getData();
     } catch (error) {
       console.log("Error posting the image:", error);

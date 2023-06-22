@@ -25,6 +25,7 @@ import EditArticle from "./pages/AdminPage/components/article/editArticleCompone
 import AddProject from "./pages/AdminPage/components/project/AddProject";
 import AddProjectImage from "./pages/AdminPage/components/project/addImage/AddProjectImage";
 import DeleteProject from "./pages/AdminPage/components/project/deleteProject/DeleteProject";
+import UpdateLandingPage from "./pages/AdminPage/components/landingPage/UpdateLandingPage";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -79,6 +80,7 @@ function App() {
               element={<AddProjectImage />}
               />
               <Route exact path="delete_project" element={<DeleteProject />} />
+              <Route exact path="update_landing_page" element={<UpdateLandingPage />} />
             </Route>
           </Routes>
         </Router>
