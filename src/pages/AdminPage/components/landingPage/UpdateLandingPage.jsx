@@ -19,7 +19,7 @@ const UpdateLandingPage = () => {
       setData(landingData);
       setHeroTittleMain(landingData.heroTittleMain);
       setHeroShortText(landingData.heroShortText);
-      setOurTeamText(landingData.ourTeamText);
+      setOurTeamText(landingData.ourtTeamText);
       setVisionAndMissionText(landingData.visionAndMissionText);
       setVisionAndMissionTittle(landingData.visionAndMissionTittle);
       setID(landingData._id);
@@ -43,7 +43,7 @@ const UpdateLandingPage = () => {
         visionAndMissionTittle: visionAndMissionTittle,
       });
       console.log("Article updated successfully!");
-      window.location.reload();
+      window.location.reload(); 
     } catch (error) {
       console.log("Error updating the article:", error);
     }

@@ -124,7 +124,7 @@ body > * {
 .Swiper4 {
   .swiper-wrapper {
     height: 410px;
-    padding: 20px 30px;
+    padding: 0 0 20px 0;
   }
   .swiper-button-prev {
     background-image: url("../components/images/prev.svg");
@@ -135,6 +135,11 @@ body > * {
     height: 70px !important;
     top: 220px !important;
     left: -1px !important;
+  }
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .swiper-button-next {
     background-image: url("../components/images/next.svg");
@@ -157,22 +162,7 @@ body > * {
   }
 }
 
-//----------------------------------------------------------------------------
-@media only screen and (max-width: 119.9375em) {
-  .Swiper4 {
-    .swiper-wrapper {
-      padding: 20px 75px;
-    }
-  }
-}
-//----------------------------------------------------------------------------
-@media only screen and (max-width: 87.5em) {
-  .Swiper4 {
-    .swiper-wrapper {
-      padding: 20px 20px;
-    }
-  }
-}
+
 //----------------------------------------------------------------------------
 @media only screen and (max-width: 51.25em) {
   .Swiper4 {
@@ -270,6 +260,12 @@ tr:nth-child(even) {
 input {
   padding: 5px;
   height: auto;
+  font-size: large;
+}
+textarea {
+  padding: 5px;
+  height: 100px;
+  width: 200px;
   font-size: large;
 }
 

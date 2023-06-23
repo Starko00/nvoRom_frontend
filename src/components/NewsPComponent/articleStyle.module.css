@@ -46,7 +46,7 @@
 .text_paragraph {
   font-size: 1.5rem;
   line-height: 2rem;
-  height: 500px;
+  height: 850px;
   overflow-y: scroll;
   text-overflow: ellipsis;
   text-align: left;

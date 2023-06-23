@@ -7,6 +7,7 @@ const EditMember = () => {
   const [name, setName] = useState("");
   const [position, setPosition] = useState("");
   const [biography, setBiography] = useState("");
+  const [selectedUser, setSelectedUser] = useState();
   const [socialMediaLinkedIn, setSocialMediaLinkedIn] = useState(
     "https://www.linkedin.com/"
   );
@@ -37,18 +38,27 @@ const EditMember = () => {
     fetchData();
   }, []);
 
-  const handleUserSelection = (userId) => {
-    const selectedUser = data.find((user) => user._id === userId);
-
-    if (selectedUser) {
-      setName(selectedUser.name);
-      setPosition(selectedUser.position);
-      setBiography(selectedUser.biography);
-      setSocialMediaLinkedIn(selectedUser.socialMediaLinkedIn);
-      setSocialMediaInstagram(selectedUser.socialMediaInstagram);
-      setSocialMediaFacebook(selectedUser.socialMediaFacebook);
-    }
+  const handleUserSelection = async (userId) => {
+    axios
+      .post("/phiramenca/api/v1/team/teamMember", {
+        id: userId,
+      })
+      .then((res) => setSelectedUser(res.data));
   };
+  useEffect(() => {
+    if (selectedUser) {
+      Object.values(selectedUser).map(
+        (user) => (
+          setName(user?.name),
+          setPosition(user?.position),
+          setBiography(user?.biography),
+          setSocialMediaLinkedIn(user?.socialMediaLinkedIn),
+          setSocialMediaInstagram(user?.socialMediaInstagram),
+          setSocialMediaFacebook(user?.socialMediaFacebook)
+        )
+      );
+    }
+  }, [selectedUser]);
 
   const handleClick = async () => {
     try {
@@ -89,9 +99,6 @@ const EditMember = () => {
             <th>Name</th>
             <th>Position</th>
             <th>Biography</th>
-            <th>FaceBook</th>
-            <th>Instagram</th>
-            <th>LinkedIn</th>
           </tr>
           <tr>
             <td>
@@ -118,6 +125,17 @@ const EditMember = () => {
                 }}
               />
             </td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <tbody>
+          <tr>
+            <th>FaceBook</th>
+            <th>Instagram</th>
+            <th>LinkedIn</th>
+          </tr>
+          <tr>
             <td>
               <textarea
                 value={socialMediaFacebook}

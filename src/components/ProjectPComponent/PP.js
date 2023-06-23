@@ -49,9 +49,10 @@ const ProjectPage = () => {
         <h1 className={style.container_rightSide_header}>
           {project?.projectName}
         </h1>
-        <p className={style.container_rightSide_paragraph}>
-          {project?.primaryText}
-        </p>
+        <div
+          className={`${style.container_rightSide_paragraph}  ${"editorText"}`}
+          dangerouslySetInnerHTML={{ __html: project?.primaryText }}
+        ></div>
         <div className={style.container_rightSide_btncontainer}>
           <button
             type="buttons"

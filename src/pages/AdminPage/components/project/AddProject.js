@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import AddProjectStyle from "./AddProjectStyle.module.scss";
 import axios from "axios";
+import { EditorState, convertToRaw } from "draft-js";
+import draftToHtml from "draftjs-to-html";
+import { Editor } from "react-draft-wysiwyg";
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
 const AddProject = () => {
   const style = AddProjectStyle;
@@ -9,6 +13,7 @@ const AddProject = () => {
   const [primaryText, setPrimaryText] = useState("");
   const [projectYear, setProjectYear] = useState("");
   const [selectedFile, setSelectedFile] = useState(null);
+  const [editorState, setEditorState] = useState(EditorState.createEmpty());
 
   //---------------------------------------------------------------
 
@@ -42,6 +47,7 @@ const AddProject = () => {
         .post("/phiramenca/api/v1/projectFiles", formData)
         .then((res) => console.log(res));
       console.log("File posted successfully!");
+      window.location.reload();
       getData();
     } catch (error) {
       console.log("Error posting the image:", error);
@@ -70,8 +76,7 @@ const AddProject = () => {
         <tbody>
           <tr>
             <th>Project Name</th>
-            <th>Primary Text</th>
-            <th>Secodnary Text</th>
+            <th>Secondary Text</th>
             <th>Project Year</th>
           </tr>
           <tr>
@@ -85,23 +90,40 @@ const AddProject = () => {
             <td>
               <textarea
                 onChange={(e) => {
-                  setPrimaryText(e.target.value);
+                  setSecodnaryText(e.target.value);
                 }}
               />
             </td>
+
             <td>
-              <textarea
-                onChange={(e) => {
-                  setSecodnaryText([e.target.value]);
-                }}
-              />
-            </td>
-            <td>
-              <textarea
+              <input
                 type="text"
                 onChange={(e) => {
                   setProjectYear(e.target.value);
                 }}
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <tbody>
+          <tr>
+            <th>Primary Text</th>
+          </tr>
+          <tr>
+            <td>
+              <Editor
+                editorState={editorState}
+                onEditorStateChange={(e) => {
+                  setEditorState(e);
+                  setPrimaryText(
+                    draftToHtml(convertToRaw(editorState.getCurrentContent()))
+                  );
+                }}
+                wrapperClassName="wrapper-class"
+                editorClassName="editor-class"
+                toolbarClassName="toolbar-class"
               />
             </td>
           </tr>

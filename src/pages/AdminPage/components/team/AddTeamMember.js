@@ -43,9 +43,6 @@ const AddTeamMember = () => {
             <th>Name</th>
             <th>Position</th>
             <th>Biography</th>
-            <th>FaceBook</th>
-            <th>Instagram</th>
-            <th>LinkedIn</th>
           </tr>
           <tr>
             <td>
@@ -69,6 +66,17 @@ const AddTeamMember = () => {
                 }}
               />
             </td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <tbody>
+          <tr>
+            <th>Facebook</th>
+            <th>Instagram</th>
+            <th>LinkedIn</th>
+          </tr>
+          <tr>
             <td>
               <textarea
                 placeholder="https://www.facebook.com/"

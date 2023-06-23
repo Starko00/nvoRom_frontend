@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
 import EditArticleStyle from "./EditArticleStyle.module.scss";
 import axios from "axios";
-import { EditorState, convertFromRaw, convertToRaw } from "draft-js";
+import {
+  EditorState,
+  convertToRaw,
+  ContentState,
+  convertFromHTML,
+} from "draft-js";
 import draftToHtml from "draftjs-to-html";
 import { Editor } from "react-draft-wysiwyg";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
@@ -15,7 +20,9 @@ const EditArticle = () => {
   const [content, setContent] = useState("");
   const [selectedOption, setSelectedOption] = useState("");
   const [data, setData] = useState([]);
-  const [editorState, setEditorState] = useState(EditorState.createEmpty());
+  const [editorState, setEditorState] = useState(
+    EditorState.createWithContent(ContentState.createFromText(""))
+  );
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
     const selectedArticle = data.find(
@@ -26,11 +33,21 @@ const EditArticle = () => {
       setAuthor(selectedArticle.author);
       setTags(selectedArticle.tags.join(", "));
       setContent(selectedArticle.content);
+      const blocksFromHTML = convertFromHTML(selectedArticle.content);
+      const state = ContentState.createFromBlockArray(
+        blocksFromHTML.contentBlocks,
+        blocksFromHTML.entityMap,
+      )
+
+      setEditorState(
+        EditorState.createWithContent(state)
+      );
     } else {
       setHedline("");
       setAuthor("");
       setTags("");
       setContent("");
+      setEditorState(EditorState.createEmpty());
     }
   };
 
@@ -115,8 +132,6 @@ const EditArticle = () => {
           <tr>
             <td>
               <Editor
-                // editorState={editorState}
-
                 editorState={editorState}
                 onEditorStateChange={(e) => {
                   setEditorState(e);

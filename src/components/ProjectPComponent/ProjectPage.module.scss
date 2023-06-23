@@ -39,13 +39,10 @@
       color: #252525;
     }
     &_paragraph {
-      font-size: 24px;
-      color: #252525;
       text-align: left;
       line-height: 35px;
-      overflow-y: scroll;
-      text-overflow: ellipsis;
-      max-height: 300px;
+      overflow-y: auto;
+      height: 300px;
       max-width: 700px;
       min-width: 250px;
       padding-right: 1rem;
@@ -161,11 +158,6 @@
       margin: 0;
       &_header {
         font-size: 2.25rem;
-      }
-      &_paragraph {
-        font-size: 1rem;
-        line-height: unset;
-        text-align: center;
       }
     }
   }

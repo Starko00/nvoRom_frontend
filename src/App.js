@@ -75,12 +75,16 @@ function App() {
               <Route exact path="delete_member" element={<DeleteMember />} />
               <Route exact path="add_project" element={<AddProject />} />
               <Route
-              exact
-              path="add_project_image"
-              element={<AddProjectImage />}
+                exact
+                path="add_project_image"
+                element={<AddProjectImage />}
               />
               <Route exact path="delete_project" element={<DeleteProject />} />
-              <Route exact path="update_landing_page" element={<UpdateLandingPage />} />
+              <Route
+                exact
+                path="update_landing_page"
+                element={<UpdateLandingPage />}
+              />
             </Route>
           </Routes>
         </Router>

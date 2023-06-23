@@ -38,7 +38,7 @@ const AddMemberImage = () => {
         .post("/phiramenca/api/v1/team/memberPhoto", formData)
         .then((res) => console.log(res));
       console.log("Image posted successfully!");
-      window.location.reload();
+      // window.location.reload();
       getData();
     } catch (error) {
       console.log("Error posting the image:", error);

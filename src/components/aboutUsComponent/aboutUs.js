@@ -23,7 +23,10 @@ const AboutUs = () => {
     <div className={style.container}>
       <h1 className={style.container_header}>O nama:</h1>
       <div className={style.container_components}>
-        {visionAndMissionText}
+       <p className={style.container_components_paragraph}>
+       
+       {visionAndMissionText}
+       </p> 
         <img className={style.container_components_img} src={img} alt="Logo" />
       </div>
     </div>
