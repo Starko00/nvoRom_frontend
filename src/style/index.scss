@@ -6,18 +6,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.editorText span {
-  font-size: unset !important;
-}
+// .editorText span {
+//   font-size: unset !important;
+// }
 
 .editorText h1 {
-  line-height: 80px;
+  line-height: 90px;
 }
 .editorText h2 {
-  line-height: 60px;
+  line-height: 80px;
 }
 .editorText h3 {
-  line-height: 40px;
+  line-height: 70px;
 }
 .editorText p {
   line-height: 35px;
