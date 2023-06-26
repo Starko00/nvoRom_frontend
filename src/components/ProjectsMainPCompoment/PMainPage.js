@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import MainStyle from "./ProjectsMainPage.module.scss";
 import SmallCard from "./cardMainSmall";
 import { CardMainBig } from "./CardMainBig";
-import { cardData } from "../../hooks/ProjectsMainPageHook/cardsData";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/scss";
 import "swiper/scss/navigation";
@@ -23,10 +22,18 @@ const PMainPage = () => {
   useEffect(() => {
     getData();
   }, []);
-  const smallCardElements = data?.map((card) => {
-    return (
-      <SmallCard card={card} key={card.id} projectYear={setProjectInYear} />
-    );
+  const smallCardElements = [];
+  const uniqueYears = [];
+
+  data?.forEach((card) => {
+    const year = card.projectYear.split("T")[0].split("-")[0];
+
+    if (!uniqueYears.includes(year)) {
+      smallCardElements.push(
+        <SmallCard card={card} key={card.id} projectYear={setProjectInYear} />
+      );
+      uniqueYears.push(year);
+    }
   });
 
   const [bigProjectData, setBigProjectData] = useState([]);
@@ -38,7 +45,7 @@ const PMainPage = () => {
       })
       .then((res) => {
         setBigProjectData(res.data.data);
-        console.log(res.data,"Big card data");
+        console.log(res.data, "Big card data");
       })
       .catch((err) => console.log(err));
   }, [projectInYear]);
@@ -63,6 +70,8 @@ const PMainPage = () => {
             clickable: true,
           }}
           navigation={true}
+          centeredSlides={true}
+          centeredSlidesBounds={true}
           modules={[Navigation, Pagination]}
           className="Swiper3"
           breakpoints={{

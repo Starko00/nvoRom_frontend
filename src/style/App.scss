@@ -85,7 +85,7 @@ body > * {
 }
 //----------------------------------------------------------------------------
 .Swiper3 {
-  min-width: 310px;
+  min-width: 100%;
   min-height: 450px;
   padding-top: 155px !important;
   padding-left: 60px !important;
@@ -161,7 +161,6 @@ body > * {
     display: none;
   }
 }
-
 
 //----------------------------------------------------------------------------
 @media only screen and (max-width: 51.25em) {

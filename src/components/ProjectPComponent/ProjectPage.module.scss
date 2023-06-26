@@ -32,6 +32,8 @@
   &_rightSide {
     margin-left: 30px;
     text-align: left;
+    max-width: 700px;
+    min-width: 250px;
 
     &_header {
       font-size: 55px;
@@ -43,8 +45,6 @@
       line-height: 35px;
       overflow-y: auto;
       height: 300px;
-      max-width: 700px;
-      min-width: 250px;
       padding-right: 1rem;
     }
     &_btncontainer {

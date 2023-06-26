@@ -6,6 +6,8 @@ import Logo from "../../components/images/ic.svg"
 const cardMainSmall = (props) => {
   const style = MainStyle;
   console.log(props);
+  const projectYear = new Date(props.card.projectYear).getFullYear(); // Extract the year from the date string
+
   return (
     <div className={`${cardStyle.card} ${style.smallCard}`}>
       <div className={cardStyle.card_left}>
@@ -15,12 +17,7 @@ const cardMainSmall = (props) => {
           alt="Logo"
         />
         <p className={`${cardStyle.card_left_paragraph} ${style.cards_date}`}>
-          {props.card.projectYear
-            .split("T")[0]
-            .replaceAll("-", ".")
-            .split(".")
-            .reverse()
-            .join(".")}
+          {projectYear}
         </p>
       </div>
       <div className={cardStyle.card_right}>

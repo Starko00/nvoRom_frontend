@@ -23,7 +23,7 @@ const DeleteProject = () => {
     try {
       axios
         .delete("/phiramenca/api/v1/getproject", {
-          _id: selectedOption,
+          id: selectedOption,
         })
         .then((res) => console.log(res));
       window.location.reload();

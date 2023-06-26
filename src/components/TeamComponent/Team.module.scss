@@ -25,6 +25,11 @@
       font-weight: 500;
       color: rgba(37, 37, 37, 0.79);
       line-height: 3rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 6;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     &_holder {
       display: flex;
