@@ -46,7 +46,7 @@
       height: 587px;
       overflow: hidden;
       img {
-        object-fit: fill;
+        object-fit: cover;
         width: 100%;
         height: 100%;
         max-height: 500px;
@@ -59,6 +59,11 @@
         font-size: 2.5rem;
         font-weight: 600;
         color: #252525;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       &_paragraph {
         color: rgba(37, 37, 37, 0.79);
@@ -128,7 +133,7 @@
     width: 100%;
     height: 267px;
     img {
-      object-fit: fill;
+      object-fit: cover;
       width: 100%;
       height: 100%;
       max-height: 540px;
@@ -148,12 +153,17 @@
         font-size: 26px;
         font-weight: 600;
         color: #252525;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       &_paragraph {
         font-size: 1rem;
         font-weight: 500;
         color: rgba(37, 37, 37, 0.79);
-        --max-lines: 2.5;
+        --max-lines: 3;
         --line-height: 1.4;
         max-height: calc(var(--max-lines) * 1em * var(--line-height));
         line-height: var(--line-height);
@@ -220,7 +230,7 @@
     width: 100%;
     height: 267px;
     img {
-      object-fit: fill;
+      object-fit: cover;
       width: 100%;
       height: 100%;
     }
@@ -244,7 +254,7 @@
         font-size: 0.7rem;
         font-weight: 500;
         color: rgba(37, 37, 37, 0.79);
-        --max-lines: 2.5;
+        --max-lines: 3;
         --line-height: 1.4;
         max-height: calc(var(--max-lines) * 1em * var(--line-height));
         line-height: var(--line-height);

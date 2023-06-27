@@ -28,7 +28,6 @@ const ArticleCard = (props) => {
       </div>
       <div className={style.ac_container_author}>
         <div className={style.ac_container_author_left}>
-          <img src={img} alt="slika" />
           <p>{props.card.author} |</p>
           <p>
             {" "}

@@ -73,7 +73,7 @@
             font-weight: 500;
             color: rgba(37, 37, 37, 0.79);
             margin-bottom: 1rem;
-            --max-lines: 2.5;
+            --max-lines: 3;
             --line-height: 1.4;
             max-height: calc(var(--max-lines) * 1em * var(--line-height));
             line-height: var(--line-height);
@@ -218,6 +218,7 @@
     }
     &_rightSide {
       margin-left: 0;
+      height: 500px;
     }
   }
 }

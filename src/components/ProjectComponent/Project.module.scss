@@ -27,7 +27,7 @@
     max-width: 403px;
     height: 267px;
     img {
-      object-fit: fill;
+      object-fit: cover;
       width: 100%;
       height: 100%;
     }
@@ -46,6 +46,11 @@
         font-size: 1.5rem;
         font-weight: 600;
         color: #252525;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       &_paragraph {
         font-size: 1rem;

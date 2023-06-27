@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import smallstyle from "./News.module.scss";
 import btn from "../../style/Button.module.scss";
-import img from "../../components/images/elvis.jpg";
 
 const SmallCard = (props) => {
   const style = smallstyle;
@@ -21,7 +20,6 @@ const SmallCard = (props) => {
       </div>
       <div className={style.small_container_author}>
         <div className={style.small_container_author_left}>
-          <img src={`/uploads/news/${props?.card?.photo}`} alt="slika" />
           <p>{props.card.author} |</p>
           <p>
             {props.card.date

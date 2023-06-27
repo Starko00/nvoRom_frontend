@@ -22,7 +22,6 @@ const SmallPCard = (props) => {
       </div>
       <div className={style.small_container_author}>
         <div className={style.small_container_author_left}>
-          <img src={img} alt="slika" />
           <p>{props.card.author} |</p>
           <p>
             {" "}

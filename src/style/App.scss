@@ -185,6 +185,7 @@ body > * {
 //----------------------------------------------------------------------------
 @media only screen and (max-width: 50em) {
   .Swiper3 {
+    padding-top: 20px !important;
     .swiper-horizontal > .swiper-pagination-bullets,
     .swiper-pagination-bullets.swiper-pagination-horizontal {
       display: unset;

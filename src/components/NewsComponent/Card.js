@@ -19,7 +19,6 @@ const Card = (props) => {
         </div>
         <div className={style.card_container_author}>
           <div className={style.card_container_author_left}>
-            <img src={`/uploads/news/${props?.card?.photo}`} alt="slika" />
             <p>{props?.card?.author} |</p>
             <p>
               {props?.card?.date
