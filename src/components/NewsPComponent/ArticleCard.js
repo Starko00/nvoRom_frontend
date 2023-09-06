@@ -21,7 +21,7 @@ const ArticleCard = (props) => {
         <div className={style.text}>
           <h1 className={style.text_header}>"{props.card.hedline}"</h1>
           <div
-            className={`${style.text_paragraph}  ${"editorText"}` }
+            className={`${style.text_paragraph}  ${"editorText"}`}
             dangerouslySetInnerHTML={{ __html: props?.card?.content }}
           ></div>
         </div>

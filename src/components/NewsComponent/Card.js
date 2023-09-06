@@ -14,8 +14,14 @@ const Card = (props) => {
           <img src={`/uploads/news/${props?.card?.photo}`} alt="slika" />
         </div>
         <div className={style.text}>
-          <h1 className={style.text_header}>"{props?.card?.hedline}"</h1>
-          <p className={style.text_paragraph}>{props?.card?.content}</p>
+          <h1
+            className={style.text_header}
+            dangerouslySetInnerHTML={{ __html: props?.card?.hedline }}
+          />
+          <p
+            className={style.text_paragraph}
+            dangerouslySetInnerHTML={{ __html: props?.card?.content }}
+          />
         </div>
         <div className={style.card_container_author}>
           <div className={style.card_container_author_left}>

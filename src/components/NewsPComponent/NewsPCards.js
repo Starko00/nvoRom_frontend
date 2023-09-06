@@ -3,7 +3,6 @@ import CardP from "./CardP";
 import NewsPStyle from "./NewsP.module.scss";
 import SmallPCard from "./SmallPCard";
 import axios from "axios";
-// Featured set
 
 const NewsP = () => {
   const [data, setData] = useState("");
@@ -12,15 +11,23 @@ const NewsP = () => {
   const getData = async () => {
     const res = await axios.get("/phiramenca/api/v1/news");
     setData(res.data);
-    console.log(res.data, "NewsPCards");
   };
+
   useEffect(() => {
     getData();
   }, []);
 
-  //Using slice method to get first 6 cards from array
+  // Using slice method to get first 6 cards from array
   useEffect(() => {
-    setFirstSix(data?.allArticles?.slice(1, 7));
+    if (data && data.allArticles) {
+      // Sort articles by date in descending order (newest first)
+      const sortedArticles = data.allArticles.sort((a, b) => {
+        return new Date(b.date) - new Date(a.date);
+      });
+
+      // Slice the first six articles
+      setFirstSix(sortedArticles.slice(1, 6));
+    }
   }, [data]);
 
   const style = NewsPStyle;
