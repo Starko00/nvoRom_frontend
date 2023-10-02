@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, } from "react";
 import ArticleStyle from "./ArticleStyle.module.scss";
 import axios from "axios";
-import { EditorState, convertFromRaw, convertToRaw } from "draft-js";
+import { EditorState,  convertToRaw } from "draft-js";
 import draftToHtml from "draftjs-to-html";
 import { Editor } from "react-draft-wysiwyg";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";

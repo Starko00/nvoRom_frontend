@@ -1,6 +1,7 @@
 import React from "react";
 import HeroStyle from "./Hero.module.scss";
 import ButtonStyle from "../../style/Button.module.scss";
+import img from "../images/Slika_Izlozba-min.jpg"
 import { useNavigate } from "react-router-dom";
 
 const Hero = ({ heroTittle = "", heroText = "" }) => {
@@ -10,7 +11,7 @@ const Hero = ({ heroTittle = "", heroText = "" }) => {
     <div className={style.hero}>
       <div className={style.hero_image}>
         <img
-          src="/uploads/teamMembers/63af138e1c11400947ff2fc8----memeberImg----jasmina.jpg"
+          src={img}
           alt="Hero"
         />
       </div>
