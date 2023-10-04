@@ -14,8 +14,8 @@ const SmallCard = (props) => {
       </div>
       <div className={style.small_container}>
         <div className={style.text}>
-          <h1 className={style.text_header}>"{props.card.hedline}"</h1>
-          <p className={style.text_paragraph}>{props.card.content}</p>
+          <h1 className={style.text_header} dangerouslySetInnerHTML={{ __html: props.card.hedline }} />
+          <p className={style.text_paragraph} dangerouslySetInnerHTML={{ __html: props.card.content }} />
         </div>
       </div>
       <div className={style.small_container_author}>
