@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import NewsPCards from "../../components/NewsPComponent/NewsPCards";
 import NewsCardNewsPage from "../../components/NewsCardN/NewsCardNewsPage";
 import PageStyle from "./NewsPage.module.scss";
-import { NCNData } from "../../hooks/NewsHook/NCNData";
 import axios from "axios";
 
 const NewsPage = () => {

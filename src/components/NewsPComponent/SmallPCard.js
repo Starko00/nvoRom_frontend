@@ -2,7 +2,6 @@ import React from "react";
 import NewsPStyle from "./NewsP.module.scss";
 import btn from "../../style/Button.module.scss";
 import { useNavigate } from "react-router-dom";
-import img from "../../components/images/elvis.jpg";
 
 const SmallPCard = (props) => {
   const style = NewsPStyle;
@@ -16,8 +15,8 @@ const SmallPCard = (props) => {
       </div>
       <div className={style.small_container}>
         <div className={style.text}>
-          <h1 className={style.text_header}>"{props.card.hedline}"</h1>
-          <p className={style.text_paragraph}>{props.card.content}</p>
+        <h1 className={style.text_header} dangerouslySetInnerHTML={{ __html: props.card.hedline }} />
+          <p className={style.text_paragraph} dangerouslySetInnerHTML={{ __html: props.card.content }} />
         </div>
       </div>
       <div className={style.small_container_author}>
